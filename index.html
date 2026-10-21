@@ -2724,6 +2724,293 @@ body.light-mode .game-subtab.active {
   color: #faf6ef !important;
 }
 
+/* ═══════════════════════════════════════════
+   MODERN MODE — clean dark UI (replaces light)
+   Default body = Old school (scanlines, square)
+   ═══════════════════════════════════════════ */
+body.modern-mode {
+  background: #0c0b0a !important;
+  background-image: none !important;
+}
+body.modern-mode::before,
+body.modern-mode::after {
+  display: none !important;
+}
+body.modern-mode .ryoku-dock {
+  background: rgba(14, 13, 12, 0.85) !important;
+  border-bottom: 1px solid rgba(232, 224, 212, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+body.modern-mode .dock-mark {
+  border-radius: 8px !important;
+  border: none !important;
+  background: #e8e0d4 !important;
+  color: #0c0b0a !important;
+}
+body.modern-mode .dock-name {
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+  color: #e8e0d4 !important;
+  letter-spacing: -0.02em;
+}
+body.modern-mode .dock-links .tab-button {
+  border-radius: 8px !important;
+  border: none !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+  font-size: 0.8rem !important;
+}
+body.modern-mode .dock-links .tab-button.active {
+  background: #e8e0d4 !important;
+  color: #0c0b0a !important;
+  border: none !important;
+}
+body.modern-mode .lang-btn,
+body.modern-mode .theme-icon-btn,
+body.modern-mode .toaster-toggle {
+  border-radius: 8px !important;
+  border: 1px solid rgba(232, 224, 212, 0.12) !important;
+  background: rgba(255,255,255,0.04) !important;
+  text-transform: none !important;
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+}
+body.modern-mode .lang-btn.active {
+  background: #e8e0d4 !important;
+  color: #0c0b0a !important;
+  border-color: transparent !important;
+}
+body.modern-mode .card {
+  border-radius: 14px !important;
+  border: 1px solid rgba(232, 224, 212, 0.1) !important;
+  background: rgba(20, 18, 16, 0.92) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+}
+body.modern-mode button,
+body.modern-mode .file-button,
+body.modern-mode .tab-button {
+  border-radius: 10px !important;
+  border: 1px solid rgba(232, 224, 212, 0.12) !important;
+  background: rgba(255,255,255,0.05) !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+  font-size: 0.85rem !important;
+}
+body.modern-mode button:hover,
+body.modern-mode .file-button:hover {
+  background: rgba(255,255,255,0.09) !important;
+  border-color: rgba(232, 224, 212, 0.22) !important;
+}
+body.modern-mode button.primary,
+body.modern-mode .file-button.primary {
+  background: #e8e0d4 !important;
+  color: #0c0b0a !important;
+  border-color: transparent !important;
+  font-weight: 600 !important;
+}
+body.modern-mode button.secondary {
+  background: transparent !important;
+  color: #e07a3d !important;
+  border-color: rgba(224, 122, 61, 0.45) !important;
+}
+body.modern-mode select,
+body.modern-mode textarea,
+body.modern-mode input[type="text"],
+body.modern-mode input[type="email"],
+body.modern-mode input:not([type="range"]):not([type="file"]):not([type="checkbox"]) {
+  border-radius: 10px !important;
+  border: 1px solid rgba(232, 224, 212, 0.12) !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+}
+body.modern-mode .drop-zone {
+  border-radius: 14px !important;
+  border: 1px dashed rgba(232, 224, 212, 0.2) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+body.modern-mode .preview-wrap,
+body.modern-mode .text-plate {
+  border-radius: 12px !important;
+  border: 1px solid rgba(232, 224, 212, 0.12) !important;
+  box-shadow: none !important;
+}
+body.modern-mode .hero-header {
+  border-bottom-color: rgba(232, 224, 212, 0.06) !important;
+}
+body.modern-mode .hl-mono {
+  letter-spacing: 0.12em;
+}
+body.modern-mode .game-subtab {
+  border-radius: 10px !important;
+  border: 1px solid rgba(232, 224, 212, 0.1) !important;
+  text-transform: none !important;
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+}
+body.modern-mode .game-subtab.active {
+  background: #e8e0d4 !important;
+  color: #0c0b0a !important;
+  border-color: transparent !important;
+}
+body.modern-mode .jar-code-block {
+  border-radius: 10px !important;
+  border-width: 1px !important;
+}
+body.modern-mode .control label,
+body.modern-mode .control label span {
+  font-family: "Space Grotesk", system-ui, sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+
+
+/* Game Select */
+.game-select-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.game-select-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start !important;
+  gap: 6px;
+  text-align: left !important;
+  padding: 16px 14px !important;
+  min-height: 96px;
+  cursor: pointer;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+.game-select-card .gs-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  color: #e8e0d4;
+  font-weight: 600;
+}
+.game-select-card .gs-desc {
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  color: #8a8074;
+  text-transform: none;
+}
+.game-select-card:hover .gs-title { color: #c4a574; }
+.game-back-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.game-back-bar button {
+  text-transform: none !important;
+}
+
+
+/* ===== Game GUI redesign ===== */
+#gamesPanel .game-layout {
+  grid-template-columns: minmax(200px, 240px) 1fr;
+  gap: 16px;
+}
+#gamesPanel .game-layout > aside.card {
+  border: 2px solid rgba(196, 165, 116, 0.28) !important;
+  background: linear-gradient(180deg, #12100e 0%, #0a0908 100%) !important;
+  padding: 16px 14px !important;
+  position: relative;
+}
+#gamesPanel .game-layout > aside.card h2 {
+  font-size: 1.35rem;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+#gamesPanel .game-stats {
+  font-family: "Courier New", monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #8a8074;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(196,165,116,0.18);
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+#gamesPanel .game-stats strong {
+  color: #e8e0d4;
+  font-weight: 700;
+}
+#gamesPanel .game-controls-hint {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #6e655c;
+  border-left: 2px solid rgba(196,165,116,0.35);
+  padding-left: 10px;
+  margin: 12px 0;
+}
+#gamesPanel .game-canvas-wrap {
+  border-radius: 0 !important;
+  border: 2px solid rgba(196,165,116,0.3) !important;
+  background: #050504 !important;
+  min-height: 320px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.55);
+}
+#gamesPanel .dino-chrome-wrap {
+  background: #f7f7f7 !important;
+  border: 2px solid #535353 !important;
+}
+#gamesPanel .button-stack {
+  gap: 8px;
+}
+#gamesPanel .mobile-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+#gamesPanel .mobile-controls button {
+  flex: 1;
+  min-width: 44px;
+}
+.game-back-bar {
+  margin-bottom: 14px !important;
+}
+.game-back-bar button {
+  font-size: 0.75rem !important;
+  padding: 6px 12px !important;
+  border-color: rgba(196,165,116,0.35) !important;
+}
+/* Game Select grid polish */
+.game-select-grid {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+  gap: 14px !important;
+}
+.game-select-card {
+  border: 2px solid rgba(196,165,116,0.22) !important;
+  background: linear-gradient(160deg, #161412 0%, #0c0b0a 100%) !important;
+  min-height: 108px !important;
+  transition: border-color 0.15s, transform 0.12s !important;
+}
+.game-select-card:hover {
+  border-color: #c4a574 !important;
+  transform: translateY(-2px);
+}
+.game-select-card .gs-title {
+  font-size: 1.2rem !important;
+}
+.game-select-card .gs-desc {
+  opacity: 0.85;
+}
+#gamesSelectView > .card {
+  border: 2px solid rgba(196,165,116,0.25) !important;
+  padding: 22px 20px !important;
+}
+#gamesSelectView h2 {
+  margin-bottom: 6px;
+}
+@media (max-width: 720px) {
+  #gamesPanel .game-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 </head>
 
@@ -2746,6 +3033,7 @@ body.light-mode .game-subtab.active {
     <button class="tab-button" data-mode="sysinfo" data-i18n="tabSysinfo">System / IP</button>
     <button class="tab-button" data-mode="mp3cover" data-i18n="tabMp3Cover">MP3 Cover</button>
     <button class="tab-button" data-mode="cheats" data-i18n="tabCheats">Cheat Sheets</button>
+    <button class="tab-button" data-mode="passgen" data-i18n="tabPassgen">Passwords</button>
     <button class="tab-button" data-mode="help" data-i18n="tabHelp">Help</button>
   </div>
   <div class="dock-actions header-tools">
@@ -2754,7 +3042,7 @@ body.light-mode .game-subtab.active {
       <button type="button" class="lang-btn" id="langBtnDe" data-lang="de" onclick="if(window.setCeyrosLang)setCeyrosLang('de')">DE</button>
     </div>
     <button type="button" class="lang-btn toaster-toggle" id="toasterToggle" title="Low-power mode">[lo]</button>
-    <button type="button" class="theme-icon-btn" id="themeToggle" title="Dark / Light mode" aria-label="Toggle theme">[*]</button>
+    <button type="button" class="theme-icon-btn" id="themeToggle" title="Old school / Modern mode" aria-label="Toggle UI mode">[OS]</button>
   </div>
 </nav>
 
@@ -3035,43 +3323,78 @@ body.light-mode .game-subtab.active {
   <section id="paintPanel" class="paint-panel">
     <div class="paint-layout">
       <aside class="card paint-tools">
-        <h2 data-i18n="paintTools">Paint Tools</h2>
+        <h2><span class="hl-serif">Doodraw</span> <span class="hl-soft">Paint</span></h2>
+        <p class="hint" style="margin:0 0 12px;">Draw — lines wiggle live, like Doodraw. No timeline needed.</p>
+        <div class="control">
+          <label>Animated brush</label>
+          <select id="paintBrushPreset">
+            <option value="wobbly" selected>Wobbly Pen</option>
+            <option value="felt">Felt Pen</option>
+            <option value="crayon">Crayon</option>
+            <option value="neon">Neon</option>
+            <option value="chalk">Chalk</option>
+            <option value="ink">Ink Nib</option>
+            <option value="solid">Solid (no wiggle)</option>
+          </select>
+        </div>
         <div class="control">
           <label>
-            <span>Brush size</span>
+            <span>Size</span>
             <span id="brushSizeValue">8 px</span>
           </label>
           <input id="brushSize" type="range" min="1" max="80" value="8">
         </div>
         <div class="control">
+          <label>Wiggle: <span id="wiggleAmtVal">4</span>px</label>
+          <input id="wiggleAmt" type="range" min="0" max="16" value="4">
+        </div>
+        <div class="control">
+          <label>Speed: <span id="wiggleSpeedVal">1.0</span>×</label>
+          <input id="wiggleSpeed" type="range" min="2" max="30" value="10">
+        </div>
+        <div class="control">
+          <label>Stabilize: <span id="stabilizeVal">40</span>%</label>
+          <input id="paintStabilize" type="range" min="0" max="90" value="40">
+        </div>
+        <div class="control">
           <label>Color</label>
-          <input type="color" id="paintColor" value="#18a873">
+          <input type="color" id="paintColor" value="#1a1612">
           <div class="color-swatches" id="colorSwatches">
-            <button type="button" class="swatch active" data-color="#18a873" style="background:#18a873"></button>
+            <button type="button" class="swatch active" data-color="#1a1612" style="background:#1a1612"></button>
+            <button type="button" class="swatch" data-color="#e07a3d" style="background:#e07a3d"></button>
+            <button type="button" class="swatch" data-color="#c4a574" style="background:#c4a574"></button>
+            <button type="button" class="swatch" data-color="#18a873" style="background:#18a873"></button>
             <button type="button" class="swatch" data-color="#42a9df" style="background:#42a9df"></button>
-            <button type="button" class="swatch" data-color="#ffad62" style="background:#ffad62"></button>
-            <button type="button" class="swatch" data-color="#ff8fa3" style="background:#ff8fa3"></button>
-            <button type="button" class="swatch" data-color="#17342c" style="background:#17342c"></button>
-            <button type="button" class="swatch" data-color="#ffffff" style="background:#ffffff; border-color:#ccc"></button>
             <button type="button" class="swatch" data-color="#e74c3c" style="background:#e74c3c"></button>
             <button type="button" class="swatch" data-color="#9b59b6" style="background:#9b59b6"></button>
             <button type="button" class="swatch" data-color="#f1c40f" style="background:#f1c40f"></button>
+            <button type="button" class="swatch" data-color="#ffffff" style="background:#ffffff; border-color:#ccc"></button>
             <button type="button" class="swatch" data-color="#2c3e50" style="background:#2c3e50"></button>
           </div>
         </div>
         <div class="control">
           <label>Tool</label>
           <div class="tool-row">
-            <button type="button" class="tool-btn active" id="toolBrush" data-tool="brush">Brush</button>
+            <button type="button" class="tool-btn active" id="toolBrush" data-tool="brush">Draw</button>
             <button type="button" class="tool-btn" id="toolEraser" data-tool="eraser">Eraser</button>
           </div>
         </div>
+        <div class="control">
+          <label>Paper</label>
+          <select id="paintPaper">
+            <option value="#ffffff" selected>White</option>
+            <option value="#f5f0e6">Cream</option>
+            <option value="#0a0908">Black</option>
+            <option value="#1a2820">Green desk</option>
+          </select>
+        </div>
         <div class="button-stack">
-          <button id="paintDownload" class="primary" data-i18n="downloadPaintPng">Download PNG</button>
+          <button id="paintDownload" class="primary">Download PNG</button>
+          <button id="paintDownloadAnim" type="button">Download animated WebM</button>
           <button id="paintClear" data-i18n="clearCanvas">Clear Canvas</button>
         </div>
         <p class="hint" style="margin-top: 16px;">
-          Draw with mouse or touch. Use the eraser to remove strokes.
+          Every stroke can wiggle on its own (Doodraw-style). Stabilization smooths shaky lines. Eraser removes nearby points.
         </p>
       </aside>
       <section class="card">
@@ -3086,13 +3409,54 @@ body.light-mode .game-subtab.active {
 
   <!-- GAMES SECTION -->
   <section id="gamesPanel" class="games-panel">
-    <div class="games-subtabs">
-      <button class="game-subtab active" data-game="tetris">Tetris</button>
-      <button class="game-subtab" data-game="dino">Dino Runner</button>
+    <!-- GAME SELECT -->
+    <div id="gamesSelectView" class="game-view active">
+      <div class="card" style="max-width:960px;margin:0 auto;">
+        <h2><span class="hl-serif">Game</span> <span class="hl-soft">Select</span></h2>
+        <p class="hint">Choose a game to play. Press Back inside a game to return here.</p>
+        <div class="game-select-grid" id="gameSelectGrid">
+          <button type="button" class="game-select-card" data-game="tetris">
+            <span class="gs-title">Tetris</span>
+            <span class="gs-desc">Stack blocks · clear lines</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="dino">
+            <span class="gs-title">Dino Runner</span>
+            <span class="gs-desc">Jump over cacti</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="blockblast">
+            <span class="gs-title">Block Blast</span>
+            <span class="gs-desc">Place pieces · clear rows</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="coinflip">
+            <span class="gs-title">Coin Flip</span>
+            <span class="gs-desc">Gold or Silver</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="mines">
+            <span class="gs-title">Mines</span>
+            <span class="gs-desc">Avoid mines · cash out</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="g2048">
+            <span class="gs-title">2048</span>
+            <span class="gs-desc">Merge tiles to 2048</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="flappy">
+            <span class="gs-title">Flappy Bird</span>
+            <span class="gs-desc">Flap through pipes</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="snake">
+            <span class="gs-title">Snake</span>
+            <span class="gs-desc">Eat · grow · survive</span>
+          </button>
+          <button type="button" class="game-select-card" data-game="blackjack">
+            <span class="gs-title">Blackjack</span>
+            <span class="gs-desc">Hit · stand · beat 21</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- TETRIS -->
-    <div id="tetrisView" class="game-view active">
+    <div id="tetrisView" class="game-view">
       <div class="game-layout">
         <aside class="card">
           <h2 data-i18n="tetris">Tetris</h2>
@@ -3152,6 +3516,224 @@ body.light-mode .game-subtab.active {
         </section>
       </div>
     </div>
+
+    <!-- BLOCK BLAST -->
+    <div id="blockblastView" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">Block</span> <span class="hl-soft">Blast</span></h2>
+          <div class="game-stats">
+            Score: <strong id="bbScore">0</strong><br>
+            Best: <strong id="bbBest">0</strong><br>
+            Clears: <strong id="bbClears">0</strong>
+          </div>
+          <div class="button-stack">
+            <button id="bbStart" class="primary">New Game</button>
+          </div>
+          <p class="game-controls-hint">
+            Click a piece below the board, then click the grid to place it.<br>
+            Fill a full row or column to clear it.<br>
+            Clear several at once for combos.
+          </p>
+          <p class="hint" id="bbStatus">Pick a piece, then place it on the board.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <canvas id="bbBoard" width="360" height="360" style="image-rendering:pixelated;cursor:pointer;max-width:100%;"></canvas>
+            <canvas id="bbTray" width="360" height="110" style="image-rendering:pixelated;cursor:pointer;max-width:100%;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- COIN FLIP -->
+    <div id="coinflipView" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">Coin</span> <span class="hl-soft">Flip</span></h2>
+          <div class="game-stats">
+            Streak: <strong id="cfStreak">0</strong><br>
+            Wins: <strong id="cfWins">0</strong> · Losses: <strong id="cfLosses">0</strong>
+          </div>
+          <p class="game-controls-hint">Pick a side — Gold or Silver — then flip. Random 50/50.</p>
+          <div class="button-stack">
+            <button type="button" id="cfGold" class="primary">Bet Gold</button>
+            <button type="button" id="cfSilver">Bet Silver</button>
+            <button type="button" id="cfReset">Reset stats</button>
+          </div>
+          <p class="hint" id="cfStatus">Choose Gold or Silver.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;justify-content:center;align-items:center;min-height:280px;">
+            <canvas id="cfCanvas" width="220" height="220" style="image-rendering:pixelated;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- MINES -->
+    <div id="minesView" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">Mines</span></h2>
+          <div class="game-stats">
+            Safe: <strong id="mnSafe">0</strong><br>
+            Multi: <strong id="mnMulti">1.00×</strong><br>
+            Status: <strong id="mnState">idle</strong>
+          </div>
+          <div class="control">
+            <label>Mines (1–12)</label>
+            <input type="range" id="mnCount" min="1" max="12" value="3">
+            <span id="mnCountVal">3</span>
+          </div>
+          <div class="button-stack">
+            <button type="button" id="mnStart" class="primary">New board</button>
+            <button type="button" id="mnCash" disabled>Cash out</button>
+          </div>
+          <p class="game-controls-hint">
+            5×5 grid. Avoid mines. Each safe tile raises the multi. Cash out before you hit one.
+          </p>
+          <p class="hint" id="mnStatus">Set mines and start.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;justify-content:center;">
+            <canvas id="mnCanvas" width="320" height="320" style="image-rendering:pixelated;cursor:pointer;max-width:100%;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 2048 -->
+    <div id="g2048View" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">2048</span></h2>
+          <div class="game-stats">
+            Score: <strong id="g2Score">0</strong><br>
+            Best: <strong id="g2Best">0</strong>
+          </div>
+          <div class="button-stack">
+            <button type="button" id="g2Start" class="primary">New Game</button>
+          </div>
+          <p class="game-controls-hint">
+            Arrow keys / WASD to slide tiles.<br>
+            Same numbers merge. Reach 2048.<br>
+            See Help for a short tutorial.
+          </p>
+          <div class="mobile-controls" id="g2Mobile">
+            <button type="button" data-g2="up">↑</button>
+            <button type="button" data-g2="left">←</button>
+            <button type="button" data-g2="down">↓</button>
+            <button type="button" data-g2="right">→</button>
+          </div>
+          <p class="hint" id="g2Status">Use arrows to play.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;justify-content:center;">
+            <canvas id="g2Canvas" width="360" height="360" style="image-rendering:pixelated;max-width:100%;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- FLAPPY BIRD -->
+    <div id="flappyView" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">Flappy</span> <span class="hl-soft">Bird</span></h2>
+          <div class="game-stats">
+            Score: <strong id="fpScore">0</strong><br>
+            Best: <strong id="fpBest">0</strong>
+          </div>
+          <div class="button-stack">
+            <button type="button" id="fpStart" class="primary">Start / Restart</button>
+          </div>
+          <p class="game-controls-hint">
+            Space / Click / Tap = flap.<br>
+            Avoid the pipes.
+          </p>
+          <p class="hint" id="fpStatus">Press Start, then flap.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;justify-content:center;">
+            <canvas id="fpCanvas" width="360" height="480" style="image-rendering:pixelated;max-width:100%;cursor:pointer;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- SNAKE -->
+    <div id="snakeView" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">Snake</span></h2>
+          <div class="game-stats">
+            Score: <strong id="snScore">0</strong><br>
+            Best: <strong id="snBest">0</strong><br>
+            Length: <strong id="snLen">3</strong>
+          </div>
+          <div class="control">
+            <label>Speed: <span id="snSpeedVal">Normal</span></label>
+            <input type="range" id="snSpeed" min="1" max="5" step="1" value="3">
+            <p class="hint" style="margin:4px 0 0;font-size:0.75rem;">1 Slow (beginner) · 3 Normal · 5 Fast</p>
+          </div>
+          <div class="button-stack">
+            <button type="button" id="snStart" class="primary">Start / Restart</button>
+          </div>
+          <p class="game-controls-hint">
+            Arrow keys / WASD to steer.<br>
+            Eat food, don't hit walls or yourself. Change speed anytime, then restart.
+          </p>
+          <div class="mobile-controls" id="snMobile">
+            <button type="button" data-sn="up">↑</button>
+            <button type="button" data-sn="left">←</button>
+            <button type="button" data-sn="down">↓</button>
+            <button type="button" data-sn="right">→</button>
+          </div>
+          <p class="hint" id="snStatus">Press Start to play.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;justify-content:center;">
+            <canvas id="snCanvas" width="360" height="360" style="image-rendering:pixelated;max-width:100%;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- BLACKJACK -->
+    <div id="blackjackView" class="game-view">
+      <div class="game-layout">
+        <aside class="card">
+          <h2><span class="hl-serif">Blackjack</span></h2>
+          <div class="game-stats">
+            Bank: <strong id="bjBank">1000</strong><br>
+            Bet: <strong id="bjBetLabel">50</strong><br>
+            Result: <strong id="bjResult">—</strong>
+          </div>
+          <div class="control">
+            <label>Bet: <span id="bjBetVal">50</span></label>
+            <input type="range" id="bjBet" min="10" max="500" step="10" value="50">
+          </div>
+          <div class="button-stack">
+            <button type="button" id="bjDeal" class="primary">Deal</button>
+            <button type="button" id="bjHit" disabled>Hit</button>
+            <button type="button" id="bjStand" disabled>Stand</button>
+            <button type="button" id="bjNewBank">Reset bank</button>
+          </div>
+          <p class="game-controls-hint">
+            Get as close to 21 as possible without going over.
+            Face cards = 10, Aces = 1 or 11.
+          </p>
+          <p class="hint" id="bjStatus">Set a bet and deal.</p>
+        </aside>
+        <section class="card">
+          <div class="game-canvas-wrap" style="display:flex;justify-content:center;">
+            <canvas id="bjCanvas" width="420" height="340" style="image-rendering:pixelated;max-width:100%;"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
   </section>
 
 
@@ -3395,6 +3977,27 @@ cat = Katze
     </div>
   </section>
 
+  <!-- PASSWORD GENERATOR -->
+  <section id="passgenPanel" class="card" style="display:none;max-width:720px;margin:auto;">
+    <h2><span class="hl-serif">Password</span> <span class="hl-soft">Generator</span></h2>
+    <p class="hint">Generate strong offline passwords. Nothing is sent to a server.</p>
+    <div class="control">
+      <label>Length: <span id="pgLenVal">24</span></label>
+      <input type="range" id="pgLen" min="8" max="64" value="24">
+    </div>
+    <label class="check-row"><input type="checkbox" id="pgUpper" checked> Uppercase (A–Z)</label>
+    <label class="check-row"><input type="checkbox" id="pgLower" checked> Lowercase (a–z)</label>
+    <label class="check-row"><input type="checkbox" id="pgDigits" checked> Digits (0–9)</label>
+    <label class="check-row"><input type="checkbox" id="pgSymbols" checked> Symbols (!@#$%…)</label>
+    <label class="check-row"><input type="checkbox" id="pgAmbiguous"> Avoid ambiguous (0OIl1)</label>
+    <div class="button-stack" style="max-width:360px;margin-top:14px;">
+      <button type="button" id="pgGenerate" class="primary">Generate strong password</button>
+      <button type="button" id="pgCopy">Copy</button>
+    </div>
+    <textarea id="pgOutput" rows="3" readonly placeholder="Password appears here…" style="width:100%;margin-top:14px;font-family:Courier New,monospace;font-size:1rem;"></textarea>
+    <p class="hint" id="pgStrength" style="margin-top:8px;"></p>
+  </section>
+
   <section id="cheatsPanel" class="card cheats-panel">
     <h2 data-i18n="cheatsTitle">Command cheat sheets</h2>
     <p class="hint" data-i18n="cheatsHint">
@@ -3507,15 +4110,32 @@ cat = Katze
     <div class="help-section">
       <h3><span class="hl-mono">04</span> Image Formats &amp; Paint</h3>
       <p>
-        Convert images to PNG / JPG / WebP. Paint: brush, colors, eraser, PNG download.
+        Convert images to PNG / JPG / WebP. Paint: Doodraw-style animated brushes (wiggle), stabilize, eraser, PNG + animated WebM.
       </p>
     </div>
 
     <div class="help-section">
       <h3><span class="hl-mono">05</span> Games</h3>
       <p>
+        Open <strong>Game Select</strong> and pick a title (Back returns to the menu).<br>
         <strong>Tetris</strong> — arrows, Space hard drop, P pause.<br>
-        <strong>Dino Runner</strong> — Chrome-style; higher jump for easier play. Space / Up / click / tap.
+        <strong>Dino Runner</strong> — Chrome-style; Space / Up / click / tap.<br>
+        <strong>Block Blast</strong> — place 3 polyominoes on 8×8; clear full rows/columns.<br>
+        <strong>Coin Flip</strong> — bet Gold or Silver (random 50/50).<br>
+        <strong>Mines</strong> — choose mine count, click safe tiles, cash out before a mine.<br>
+        <strong>2048</strong> — slide tiles with arrows/WASD; merge equals to reach 2048.<br>
+        <strong>Flappy Bird</strong> — Space / click to flap; wider gaps, slower speed.<br>
+        <strong>Snake</strong> — arrows / WASD; eat food, avoid walls and yourself.<br>
+        <strong>Blackjack</strong> — bet, hit / stand, beat the dealer to 21.
+      </p>
+    </div>
+    <div class="help-section">
+      <h3><span class="hl-mono">05b</span> 2048 tutorial</h3>
+      <p>
+        The board is 4×4. Each move slides every tile as far as it can in that direction.
+        When two tiles with the <strong>same number</strong> collide, they merge into one tile with double the value
+        (2+2→4, 4+4→8, …). A new 2 (sometimes 4) spawns after every move. Plan ahead so you do not fill the board
+        with no merges left. Goal: create a <strong>2048</strong> tile (you can keep going for a higher score).
       </p>
     </div>
 
@@ -3538,7 +4158,8 @@ cat = Katze
     <div class="help-section">
       <h3><span class="hl-mono">08</span> Other</h3>
       <p>
-        Phone Preview, System / IP, Cheat Sheets. EN / DE, <span class="hl-mono">[*]</span> theme,
+        Phone Preview, System / IP, Cheat Sheets. EN / DE.
+        <span class="hl-mono">[OS]</span> / <span class="hl-mono">[MD]</span> toggles Old school vs Modern UI.
         <span class="hl-mono">[lo]</span> low-power mode. Humanize is an optional download under Text Editor.
       </p>
     </div>
@@ -4571,113 +5192,408 @@ document.getElementById("downloadEditor").addEventListener("click", () => {
   }
 });
 
-/* PAINT */
-const paintCanvas = document.getElementById("paintCanvas");
-const paintCtx = paintCanvas.getContext("2d");
-const brushSize = document.getElementById("brushSize");
-const brushSizeValue = document.getElementById("brushSizeValue");
-const paintColor = document.getElementById("paintColor");
-let painting = false, currentTool = "brush", lastX = 0, lastY = 0;
+/* PAINT — Doodraw-style animated brushes */
+(function doodrawPaint() {
+  const paintCanvas = document.getElementById("paintCanvas");
+  if (!paintCanvas) return;
+  const paintCtx = paintCanvas.getContext("2d");
+  const brushSize = document.getElementById("brushSize");
+  const brushSizeValue = document.getElementById("brushSizeValue");
+  const paintColor = document.getElementById("paintColor");
+  const wiggleAmt = document.getElementById("wiggleAmt");
+  const wiggleAmtVal = document.getElementById("wiggleAmtVal");
+  const wiggleSpeed = document.getElementById("wiggleSpeed");
+  const wiggleSpeedVal = document.getElementById("wiggleSpeedVal");
+  const stabilizeEl = document.getElementById("paintStabilize");
+  const stabilizeVal = document.getElementById("stabilizeVal");
+  const presetEl = document.getElementById("paintBrushPreset");
+  const paperEl = document.getElementById("paintPaper");
 
-function fillPaintBackground() {
-  paintCtx.fillStyle = "#ffffff";
-  paintCtx.fillRect(0, 0, paintCanvas.width, paintCanvas.height);
-}
-fillPaintBackground();
+  let painting = false, currentTool = "brush", lastX = 0, lastY = 0;
+  let paintStrokes = [];
+  let currentStroke = null;
+  let paper = "#ffffff";
+  let animId = null;
 
-function getPaintPos(e) {
-  const rect = paintCanvas.getBoundingClientRect();
-  const scaleX = paintCanvas.width / rect.width;
-  const scaleY = paintCanvas.height / rect.height;
-  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-  return { x: (clientX - rect.left) * scaleX, y: (clientY - rect.top) * scaleY };
-}
+  const PRESETS = {
+    wobbly: { wiggle: 5, size: 12, sizeScale: 1, alpha: 1, jitter: 1.0, dash: 0 },
+    felt:   { wiggle: 2.5, speed: 8, sizeScale: 1.15, alpha: 0.92, jitter: 0.5, dash: 0 },
+    crayon: { wiggle: 3.5, speed: 7, sizeScale: 1.4, alpha: 0.75, jitter: 1.4, dash: 0 },
+    neon:   { wiggle: 4, speed: 14, sizeScale: 0.9, alpha: 0.95, jitter: 0.8, dash: 0, glow: true },
+    chalk:  { wiggle: 4.5, speed: 6, sizeScale: 1.6, alpha: 0.7, jitter: 1.8, dash: 0 },
+    ink:    { wiggle: 1.5, speed: 9, sizeScale: 0.75, alpha: 1, jitter: 0.3, dash: 0 },
+    solid:  { wiggle: 0, speed: 10, sizeScale: 1, alpha: 1, jitter: 0, dash: 0 }
+  };
 
-function startPaint(e) {
-  e.preventDefault();
-  painting = true;
-  const pos = getPaintPos(e);
-  lastX = pos.x; lastY = pos.y;
-  drawDot(pos.x, pos.y);
-}
-function movePaint(e) {
-  if (!painting) return;
-  e.preventDefault();
-  const pos = getPaintPos(e);
-  drawLine(lastX, lastY, pos.x, pos.y);
-  lastX = pos.x; lastY = pos.y;
-}
-function endPaint() { painting = false; }
+  function currentPreset() {
+    const key = (presetEl && presetEl.value) || "wobbly";
+    return PRESETS[key] || PRESETS.wobbly;
+  }
 
-function drawDot(x, y) {
-  const size = Number(brushSize.value);
-  paintCtx.beginPath();
-  paintCtx.arc(x, y, size / 2, 0, Math.PI * 2);
-  paintCtx.fillStyle = currentTool === "eraser" ? "#ffffff" : paintColor.value;
-  paintCtx.fill();
-}
-function drawLine(x1, y1, x2, y2) {
-  const size = Number(brushSize.value);
-  paintCtx.beginPath();
-  paintCtx.moveTo(x1, y1);
-  paintCtx.lineTo(x2, y2);
-  paintCtx.strokeStyle = currentTool === "eraser" ? "#ffffff" : paintColor.value;
-  paintCtx.lineWidth = size;
-  paintCtx.lineCap = "round";
-  paintCtx.lineJoin = "round";
-  paintCtx.stroke();
-}
+  function fillPaper() {
+    paintCtx.fillStyle = paper;
+    paintCtx.fillRect(0, 0, paintCanvas.width, paintCanvas.height);
+  }
 
-paintCanvas.addEventListener("mousedown", startPaint);
-paintCanvas.addEventListener("mousemove", movePaint);
-paintCanvas.addEventListener("mouseup", endPaint);
-paintCanvas.addEventListener("mouseleave", endPaint);
-paintCanvas.addEventListener("touchstart", startPaint, { passive: false });
-paintCanvas.addEventListener("touchmove", movePaint, { passive: false });
-paintCanvas.addEventListener("touchend", endPaint);
-paintCanvas.addEventListener("touchcancel", endPaint);
+  function getPos(e) {
+    const rect = paintCanvas.getBoundingClientRect();
+    const scaleX = paintCanvas.width / rect.width;
+    const scaleY = paintCanvas.height / rect.height;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return { x: (clientX - rect.left) * scaleX, y: (clientY - rect.top) * scaleY };
+  }
 
-brushSize.addEventListener("input", () => {
-  brushSizeValue.textContent = brushSize.value + " px";
-});
+  function smoothPoint(prev, next, amount) {
+    // amount 0..0.9
+    return {
+      x: prev.x + (next.x - prev.x) * (1 - amount),
+      y: prev.y + (next.y - prev.y) * (1 - amount)
+    };
+  }
 
-document.querySelectorAll(".tool-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".tool-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    currentTool = btn.dataset.tool;
-    paintCanvas.style.cursor = currentTool === "eraser" ? "cell" : "crosshair";
+  function drawStroke(ctx, s, t) {
+    const pts = s.points;
+    if (!pts || !pts.length) return;
+    const amt = s.wiggle || 0;
+    const spd = (s.speed || 10) * 0.001;
+    const jitter = s.jitter || 0;
+    ctx.save();
+    ctx.globalAlpha = s.alpha != null ? s.alpha : 1;
+    if (s.glow) {
+      ctx.shadowColor = s.color;
+      ctx.shadowBlur = Math.max(6, s.size * 1.2);
+    }
+    ctx.strokeStyle = s.color;
+    ctx.fillStyle = s.color;
+    ctx.lineWidth = s.size;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    for (let i = 0; i < pts.length; i++) {
+      let x = pts[i].x, y = pts[i].y;
+      if (amt > 0) {
+        const ph = i * 0.65 + (s.seed || 0);
+        const n1 = Math.sin(t * spd * 6.2 + ph);
+        const n2 = Math.cos(t * spd * 5.1 + ph * 1.37);
+        const n3 = Math.sin(t * spd * 3.3 + ph * 2.1) * 0.5;
+        x += (n1 + n3 * jitter) * amt;
+        y += (n2 + n1 * 0.4 * jitter) * amt;
+      }
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    if (pts.length === 1) {
+      let x = pts[0].x, y = pts[0].y;
+      if (amt > 0) {
+        x += Math.sin(t * spd * 6) * amt;
+        y += Math.cos(t * spd * 5) * amt;
+      }
+      ctx.beginPath();
+      ctx.arc(x, y, s.size / 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    // crayon/chalk grain: extra light offset pass
+    if ((s.preset === "crayon" || s.preset === "chalk") && pts.length > 1) {
+      ctx.globalAlpha = (s.alpha || 1) * 0.35;
+      ctx.lineWidth = Math.max(1, s.size * 0.55);
+      ctx.beginPath();
+      for (let i = 0; i < pts.length; i++) {
+        const ph = i * 1.1 + (s.seed || 0) + 9;
+        let x = pts[i].x + Math.sin(t * spd * 4 + ph) * (amt * 0.6 + 1);
+        let y = pts[i].y + Math.cos(t * spd * 3.5 + ph) * (amt * 0.6 + 1);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function redraw(t) {
+    fillPaper();
+    const time = t == null ? performance.now() : t;
+    for (const s of paintStrokes) drawStroke(paintCtx, s, time);
+    if (currentStroke) drawStroke(paintCtx, currentStroke, time);
+    // eraser preview ring
+    if (currentTool === "eraser" && eraserCursor) {
+      const r = Number(brushSize.value) * 1.6 + 4;
+      paintCtx.save();
+      paintCtx.beginPath();
+      paintCtx.arc(eraserCursor.x, eraserCursor.y, r, 0, Math.PI * 2);
+      paintCtx.strokeStyle = "rgba(224,122,61,0.85)";
+      paintCtx.lineWidth = 1.5;
+      paintCtx.setLineDash([4, 4]);
+      paintCtx.stroke();
+      paintCtx.fillStyle = "rgba(224,122,61,0.08)";
+      paintCtx.fill();
+      paintCtx.restore();
+    }
+  }
+
+  function loop(now) {
+    redraw(now);
+    animId = requestAnimationFrame(loop);
+  }
+  animId = requestAnimationFrame(loop);
+
+  function dist2(ax, ay, bx, by) {
+    const dx = ax - bx, dy = ay - by;
+    return dx * dx + dy * dy;
+  }
+
+  // true if segment a-b comes within radius of point (cx,cy)
+  function segHitsCircle(ax, ay, bx, by, cx, cy, r) {
+    const r2 = r * r;
+    if (dist2(ax, ay, cx, cy) <= r2 || dist2(bx, by, cx, cy) <= r2) return true;
+    const abx = bx - ax, aby = by - ay;
+    const len2 = abx * abx + aby * aby;
+    if (len2 < 1e-6) return false;
+    let t = ((cx - ax) * abx + (cy - ay) * aby) / len2;
+    t = Math.max(0, Math.min(1, t));
+    const px = ax + t * abx, py = ay + t * aby;
+    return dist2(px, py, cx, cy) <= r2;
+  }
+
+  function eraseNear(x, y, radius) {
+    // radius grows a bit with brush size so thin lines are easy to hit
+    const r = Math.max(6, radius);
+    const r2 = r * r;
+    const kept = [];
+
+    for (const s of paintStrokes) {
+      const pts = s.points;
+      if (!pts || !pts.length) continue;
+
+      // mark points inside eraser
+      const inside = pts.map(pt => dist2(pt.x, pt.y, x, y) <= r2);
+
+      // also mark endpoints of segments that pass through the eraser
+      for (let i = 0; i < pts.length - 1; i++) {
+        if (segHitsCircle(pts[i].x, pts[i].y, pts[i + 1].x, pts[i + 1].y, x, y, r)) {
+          inside[i] = true;
+          inside[i + 1] = true;
+        }
+      }
+
+      // split into contiguous outside runs (proper cut, not one merged polyline)
+      let run = [];
+      const flush = () => {
+        if (run.length >= 1) {
+          // drop tiny crumbs
+          if (run.length >= 2 || s.size >= 10) {
+            kept.push(Object.assign({}, s, {
+              points: run,
+              seed: (s.seed || 0) + Math.random() * 0.01
+            }));
+          }
+        }
+        run = [];
+      };
+      for (let i = 0; i < pts.length; i++) {
+        if (!inside[i]) run.push({ x: pts[i].x, y: pts[i].y });
+        else flush();
+      }
+      flush();
+    }
+    paintStrokes = kept;
+  }
+
+  // denser erase along the drag path so fast strokes still get removed
+  function eraseStroke(x0, y0, x1, y1, radius) {
+    const dx = x1 - x0, dy = y1 - y0;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const step = Math.max(2, radius * 0.35);
+    const n = Math.max(1, Math.ceil(dist / step));
+    for (let i = 0; i <= n; i++) {
+      const t = i / n;
+      eraseNear(x0 + dx * t, y0 + dy * t, radius);
+    }
+  }
+
+  let eraserCursor = null; // {x,y} for overlay
+
+
+  function applyPresetToControls() {
+    const pr = currentPreset();
+    if (wiggleAmt && pr.wiggle != null) {
+      wiggleAmt.value = String(Math.round(pr.wiggle));
+      if (wiggleAmtVal) wiggleAmtVal.textContent = wiggleAmt.value;
+    }
+    if (wiggleSpeed && pr.speed != null) {
+      wiggleSpeed.value = String(pr.speed);
+      if (wiggleSpeedVal) wiggleSpeedVal.textContent = (pr.speed / 10).toFixed(1);
+    }
+  }
+
+  function makeStrokeStyle() {
+    const pr = currentPreset();
+    const size = Number(brushSize.value) * (pr.sizeScale || 1);
+    const wiggle = pr.wiggle === 0 ? 0 : Number(wiggleAmt.value);
+    const speed = Number(wiggleSpeed.value) || pr.speed || 10;
+    return {
+      color: paintColor.value,
+      size: size,
+      wiggle: wiggle,
+      speed: speed,
+      alpha: pr.alpha,
+      jitter: pr.jitter,
+      glow: !!pr.glow,
+      preset: (presetEl && presetEl.value) || "wobbly",
+      seed: Math.random() * 1000,
+      points: []
+    };
+  }
+
+  function startPaint(e) {
+    e.preventDefault();
+    painting = true;
+    const pos = getPos(e);
+    lastX = pos.x; lastY = pos.y;
+    if (currentTool === "eraser") {
+      eraserCursor = { x: pos.x, y: pos.y };
+      eraseNear(pos.x, pos.y, Number(brushSize.value) * 1.6 + 4);
+      return;
+    }
+    currentStroke = makeStrokeStyle();
+    currentStroke.points.push({ x: pos.x, y: pos.y });
+  }
+
+  function movePaint(e) {
+    if (!painting) return;
+    e.preventDefault();
+    let pos = getPos(e);
+    if (currentTool === "eraser") {
+      eraserCursor = { x: pos.x, y: pos.y };
+      eraseStroke(lastX, lastY, pos.x, pos.y, Number(brushSize.value) * 1.6 + 4);
+      lastX = pos.x; lastY = pos.y;
+      return;
+    }
+    if (!currentStroke) return;
+    const stab = (Number(stabilizeEl && stabilizeEl.value) || 0) / 100 * 0.85;
+    if (stab > 0 && currentStroke.points.length) {
+      const prev = currentStroke.points[currentStroke.points.length - 1];
+      pos = {
+        x: prev.x + (pos.x - prev.x) * (1 - stab),
+        y: prev.y + (pos.y - prev.y) * (1 - stab)
+      };
+    }
+    const dx = pos.x - lastX, dy = pos.y - lastY;
+    if (dx * dx + dy * dy < 1.5) return;
+    currentStroke.points.push({ x: pos.x, y: pos.y });
+    lastX = pos.x; lastY = pos.y;
+  }
+
+  function endPaint() {
+    if (currentStroke && currentStroke.points.length) paintStrokes.push(currentStroke);
+    currentStroke = null;
+    painting = false;
+  }
+
+  paintCanvas.addEventListener("mousedown", startPaint);
+  paintCanvas.addEventListener("mousemove", function (e) {
+    if (currentTool === "eraser") {
+      const pos = getPos(e);
+      eraserCursor = { x: pos.x, y: pos.y };
+    }
+    movePaint(e);
   });
-});
-
-document.querySelectorAll(".swatch").forEach(swatch => {
-  swatch.addEventListener("click", () => {
-    document.querySelectorAll(".swatch").forEach(s => s.classList.remove("active"));
-    swatch.classList.add("active");
-    paintColor.value = swatch.dataset.color;
-    currentTool = "brush";
-    document.querySelectorAll(".tool-btn").forEach(b => b.classList.remove("active"));
-    document.getElementById("toolBrush").classList.add("active");
-    paintCanvas.style.cursor = "crosshair";
+  paintCanvas.addEventListener("mouseup", endPaint);
+  paintCanvas.addEventListener("mouseleave", function () {
+    eraserCursor = null;
+    endPaint();
   });
-});
+  paintCanvas.addEventListener("touchstart", startPaint, { passive: false });
+  paintCanvas.addEventListener("touchmove", movePaint, { passive: false });
+  paintCanvas.addEventListener("touchend", endPaint);
+  paintCanvas.addEventListener("touchcancel", endPaint);
 
-paintColor.addEventListener("input", () => {
-  document.querySelectorAll(".swatch").forEach(s => s.classList.remove("active"));
-  currentTool = "brush";
-  document.querySelectorAll(".tool-btn").forEach(b => b.classList.remove("active"));
-  document.getElementById("toolBrush").classList.add("active");
-  paintCanvas.style.cursor = "crosshair";
-});
+  if (brushSize) brushSize.addEventListener("input", () => {
+    if (brushSizeValue) brushSizeValue.textContent = brushSize.value + " px";
+  });
+  if (wiggleAmt) wiggleAmt.addEventListener("input", () => {
+    if (wiggleAmtVal) wiggleAmtVal.textContent = wiggleAmt.value;
+  });
+  if (wiggleSpeed) wiggleSpeed.addEventListener("input", () => {
+    if (wiggleSpeedVal) wiggleSpeedVal.textContent = (Number(wiggleSpeed.value) / 10).toFixed(1);
+  });
+  if (stabilizeEl) stabilizeEl.addEventListener("input", () => {
+    if (stabilizeVal) stabilizeVal.textContent = stabilizeEl.value;
+  });
+  if (presetEl) presetEl.addEventListener("change", applyPresetToControls);
+  if (paperEl) paperEl.addEventListener("change", () => {
+    paper = paperEl.value || "#ffffff";
+  });
 
-document.getElementById("paintClear").addEventListener("click", fillPaintBackground);
-document.getElementById("paintDownload").addEventListener("click", () => {
-  const link = document.createElement("a");
-  link.download = "ceyros-painting.png";
-  link.href = paintCanvas.toDataURL("image/png");
-  link.click();
-});
+  document.querySelectorAll("#paintPanel .tool-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#paintPanel .tool-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentTool = btn.dataset.tool;
+      paintCanvas.style.cursor = currentTool === "eraser" ? "cell" : "crosshair";
+    });
+  });
+
+  document.querySelectorAll("#colorSwatches .swatch").forEach(swatch => {
+    swatch.addEventListener("click", () => {
+      document.querySelectorAll("#colorSwatches .swatch").forEach(s => s.classList.remove("active"));
+      swatch.classList.add("active");
+      if (paintColor) paintColor.value = swatch.dataset.color;
+    });
+  });
+
+  document.getElementById("paintClear")?.addEventListener("click", () => {
+    paintStrokes = [];
+    currentStroke = null;
+    fillPaper();
+  });
+
+  document.getElementById("paintDownload")?.addEventListener("click", () => {
+    redraw(performance.now());
+    const link = document.createElement("a");
+    link.download = "ceyros-doodraw.png";
+    link.href = paintCanvas.toDataURL("image/png");
+    link.click();
+  });
+
+  document.getElementById("paintDownloadAnim")?.addEventListener("click", async () => {
+    if (!window.MediaRecorder) {
+      alert("Animated export not supported in this browser.");
+      return;
+    }
+    const btn = document.getElementById("paintDownloadAnim");
+    if (btn) { btn.disabled = true; btn.textContent = "Recording…"; }
+    try {
+      const stream = paintCanvas.captureStream(30);
+      const mime = MediaRecorder.isTypeSupported("video/webm;codecs=vp9")
+        ? "video/webm;codecs=vp9"
+        : MediaRecorder.isTypeSupported("video/webm") ? "video/webm" : "";
+      if (!mime) { alert("WebM not supported."); return; }
+      const chunks = [];
+      const rec = new MediaRecorder(stream, { mimeType: mime, videoBitsPerSecond: 4000000 });
+      rec.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+      const done = new Promise(res => { rec.onstop = res; });
+      rec.start(100);
+      await new Promise(r => setTimeout(r, 2200));
+      rec.stop();
+      await done;
+      const blob = new Blob(chunks, { type: mime });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "ceyros-doodraw.webm";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    } catch (err) {
+      alert("Export failed: " + (err.message || err));
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = "Download animated WebM"; }
+    }
+  });
+
+  applyPresetToControls();
+  fillPaper();
+})();
 
 
 /* ==================== TOASTER / LOW-POWER MODE ==================== */
@@ -4958,7 +5874,7 @@ const G = {
 const SPR_DINO_RUN = [
   // two frames approximated as rects drawn by code
 ];
-let dRunning = false, dScore = 0, dHigh = 0, dSpeed = 6;
+let dRunning = false, dScore = 0, dHigh = 0, dSpeed = 4.2;
 let dinoY = 0, dinoVY = 0, dinoOnGround = true;
 let obstacles = [], clouds = [];
 let dAnimId = null, dLastTime = 0, dSpawnTimer = 0, dFrame = 0;
@@ -4970,7 +5886,7 @@ function padScore(n) {
 
 function resetDino() {
   dScore = 0;
-  dSpeed = 6;
+  dSpeed = 4.2;
   dinoY = 0;
   dinoVY = 0;
   dinoOnGround = true;
@@ -4992,7 +5908,7 @@ function jumpDino() {
     return;
   }
   if (dinoOnGround) {
-    dinoVY = -15.5;
+    dinoVY = -16.8;
     dinoOnGround = false;
   }
 }
@@ -5008,9 +5924,9 @@ function startDino() {
 function spawnCactus() {
   const kind = Math.random();
   let w, h;
-  if (kind > 0.7) { w = 28; h = 50; }      // tall
-  else if (kind > 0.35) { w = 42; h = 36; } // wide cluster
-  else { w = 18; h = 32; }                   // small
+  if (kind > 0.85) { w = 24; h = 42; }      // tall (rarer)
+  else if (kind > 0.55) { w = 34; h = 30; } // medium
+  else { w = 16; h = 26; }                   // small (common)
   obstacles.push({ x: dinoCanvas.width + 10, w, h, kind });
 }
 
@@ -5133,7 +6049,7 @@ function dinoLoop(now) {
   dFrame++;
 
   if (dRunning) {
-    dinoVY += 0.55;
+    dinoVY += 0.42;
     dinoY += dinoVY;
     if (dinoY >= 0) {
       dinoY = 0;
@@ -5141,8 +6057,8 @@ function dinoLoop(now) {
       dinoOnGround = true;
     }
 
-    dScore += dt * 0.015 * (dSpeed / 6);
-    dSpeed = 6 + dScore / 100;
+    dScore += dt * 0.012 * (dSpeed / 5);
+    dSpeed = 4.2 + dScore / 160;
     document.getElementById("dinoScore").textContent = padScore(dScore);
 
     groundOffset += dSpeed * (dt / 16) * 0.9;
@@ -5154,7 +6070,7 @@ function dinoLoop(now) {
     dSpawnTimer -= dt;
     if (dSpawnTimer <= 0) {
       spawnCactus();
-      dSpawnTimer = 900 + Math.random() * 1400 - Math.min(400, dScore * 2);
+      dSpawnTimer = 1200 + Math.random() * 1600 - Math.min(280, dScore * 1.2);
     }
 
     for (let i = obstacles.length - 1; i >= 0; i--) {
@@ -5163,11 +6079,11 @@ function dinoLoop(now) {
     }
 
     // hitbox
-    const dx = G.dinoX + 8;
-    const dy = G.groundY - 40 + dinoY;
-    const dw = 28, dh = 36;
+    const dx = G.dinoX + 12;
+    const dy = G.groundY - 36 + dinoY;
+    const dw = 20, dh = 30;
     for (const o of obstacles) {
-      const ox = o.x + 2, oy = G.groundY - o.h, ow = o.w - 4, oh = o.h - 4;
+      const ox = o.x + 6, oy = G.groundY - o.h + 4, ow = Math.max(8, o.w - 10), oh = Math.max(10, o.h - 8);
       if (dx < ox + ow && dx + dw > ox && dy < oy + oh && dy + dh > oy) {
         dRunning = false;
         if (Math.floor(dScore) > dHigh) {
@@ -5200,15 +6116,1235 @@ document.addEventListener("keydown", e => {
   }
 });
 
-/* GAME SUBTABS */
-document.querySelectorAll(".game-subtab").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".game-subtab").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    document.querySelectorAll(".game-view").forEach(v => v.classList.remove("active"));
-    document.getElementById(btn.dataset.game + "View").classList.add("active");
+/* ==================== BLOCK BLAST ==================== */
+(function blockBlastGame() {
+  const boardCanvas = document.getElementById("bbBoard");
+  const trayCanvas = document.getElementById("bbTray");
+  if (!boardCanvas || !trayCanvas) return;
+  const bctx = boardCanvas.getContext("2d");
+  const tctx = trayCanvas.getContext("2d");
+  bctx.imageSmoothingEnabled = false;
+  tctx.imageSmoothingEnabled = false;
+
+  const SIZE = 8;
+  const CELL = 40;
+  const COLORS = ["#e07a3d", "#c4a574", "#83f3c2", "#73caff", "#ff8fa3", "#f1c40f", "#9b59b6", "#e8e0d4"];
+  const SHAPES = [
+    [[1]],
+    [[1,1]],
+    [[1],[1]],
+    [[1,1,1]],
+    [[1],[1],[1]],
+    [[1,1],[1,1]],
+    [[1,1,1],[1,1,1],[1,1,1]],
+    [[1,0],[1,0],[1,1]],
+    [[0,1],[0,1],[1,1]],
+    [[1,1,1],[0,0,1]],
+    [[1,1,1],[1,0,0]],
+    [[1,1,0],[0,1,1]],
+    [[0,1,1],[1,1,0]],
+    [[1,1,1],[0,1,0]],
+    [[0,1],[1,1],[0,1]],
+    [[1,0],[1,1],[1,0]],
+    [[1,1,1,1]],
+    [[1],[1],[1],[1]],
+    [[1,1,1],[1,1,1]],
+    [[1,1],[1,1],[1,1]]
+  ];
+
+  let grid = [];
+  let pieces = [null, null, null];
+  let selected = -1;
+  let score = 0, best = 0, clears = 0;
+  let hover = null; // {x,y} on board
+  let gameOver = false;
+
+  try {
+    const stored = localStorage.getItem("ceyros-bb-best");
+    if (stored) best = parseInt(stored, 10) || 0;
+  } catch (e) {}
+
+  function emptyGrid() {
+    grid = Array.from({ length: SIZE }, () => Array(SIZE).fill(0));
+  }
+
+  function shapeSize(sh) {
+    return { h: sh.length, w: sh[0].length };
+  }
+
+  function randomPiece() {
+    const sh = SHAPES[Math.floor(Math.random() * SHAPES.length)].map(r => r.slice());
+    const color = 1 + Math.floor(Math.random() * COLORS.length);
+    return { shape: sh, color: color };
+  }
+
+  function refillPieces() {
+    if (pieces.every(p => !p)) {
+      pieces = [randomPiece(), randomPiece(), randomPiece()];
+    }
+  }
+
+  function canPlace(piece, gx, gy) {
+    if (!piece) return false;
+    const sh = piece.shape;
+    for (let r = 0; r < sh.length; r++) {
+      for (let c = 0; c < sh[r].length; c++) {
+        if (!sh[r][c]) continue;
+        const x = gx + c, y = gy + r;
+        if (x < 0 || y < 0 || x >= SIZE || y >= SIZE) return false;
+        if (grid[y][x]) return false;
+      }
+    }
+    return true;
+  }
+
+  function placePiece(piece, gx, gy) {
+    const sh = piece.shape;
+    for (let r = 0; r < sh.length; r++) {
+      for (let c = 0; c < sh[r].length; c++) {
+        if (sh[r][c]) grid[gy + r][gx + c] = piece.color;
+      }
+    }
+  }
+
+  function clearLines() {
+    const fullRows = [];
+    const fullCols = [];
+    for (let y = 0; y < SIZE; y++) {
+      if (grid[y].every(v => v)) fullRows.push(y);
+    }
+    for (let x = 0; x < SIZE; x++) {
+      let full = true;
+      for (let y = 0; y < SIZE; y++) if (!grid[y][x]) { full = false; break; }
+      if (full) fullCols.push(x);
+    }
+    const n = fullRows.length + fullCols.length;
+    if (!n) return 0;
+    fullRows.forEach(y => { for (let x = 0; x < SIZE; x++) grid[y][x] = 0; });
+    fullCols.forEach(x => { for (let y = 0; y < SIZE; y++) grid[y][x] = 0; });
+    clears += n;
+    // combo-ish scoring
+    return n * 10 + (n > 1 ? n * n * 5 : 0) + (n >= 3 ? 30 : 0);
+  }
+
+  function anyMoveLeft() {
+    for (const p of pieces) {
+      if (!p) continue;
+      for (let y = 0; y < SIZE; y++) {
+        for (let x = 0; x < SIZE; x++) {
+          if (canPlace(p, x, y)) return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  function updateStats() {
+    const s = document.getElementById("bbScore");
+    const b = document.getElementById("bbBest");
+    const c = document.getElementById("bbClears");
+    if (s) s.textContent = String(score);
+    if (b) b.textContent = String(best);
+    if (c) c.textContent = String(clears);
+  }
+
+  function setStatus(msg) {
+    const el = document.getElementById("bbStatus");
+    if (el) el.textContent = msg;
+  }
+
+  function drawCell(ctx, x, y, colorIdx, cell) {
+    const pad = 2;
+    if (colorIdx) {
+      ctx.fillStyle = COLORS[(colorIdx - 1) % COLORS.length];
+      ctx.fillRect(x * cell + pad, y * cell + pad, cell - pad * 2, cell - pad * 2);
+      ctx.fillStyle = "rgba(255,255,255,0.15)";
+      ctx.fillRect(x * cell + pad, y * cell + pad, cell - pad * 2, 4);
+    } else {
+      ctx.fillStyle = "rgba(232,224,212,0.06)";
+      ctx.fillRect(x * cell + pad, y * cell + pad, cell - pad * 2, cell - pad * 2);
+    }
+  }
+
+  function drawBoard() {
+    bctx.fillStyle = "#0a0908";
+    bctx.fillRect(0, 0, boardCanvas.width, boardCanvas.height);
+    bctx.strokeStyle = "rgba(196,165,116,0.2)";
+    bctx.lineWidth = 1;
+    for (let i = 0; i <= SIZE; i++) {
+      bctx.beginPath();
+      bctx.moveTo(i * CELL + 0.5, 0);
+      bctx.lineTo(i * CELL + 0.5, SIZE * CELL);
+      bctx.moveTo(0, i * CELL + 0.5);
+      bctx.lineTo(SIZE * CELL, i * CELL + 0.5);
+      bctx.stroke();
+    }
+    for (let y = 0; y < SIZE; y++) {
+      for (let x = 0; x < SIZE; x++) drawCell(bctx, x, y, grid[y][x], CELL);
+    }
+    // ghost
+    if (!gameOver && selected >= 0 && pieces[selected] && hover) {
+      const p = pieces[selected];
+      const ok = canPlace(p, hover.x, hover.y);
+      const sh = p.shape;
+      for (let r = 0; r < sh.length; r++) {
+        for (let c = 0; c < sh[r].length; c++) {
+          if (!sh[r][c]) continue;
+          const x = hover.x + c, y = hover.y + r;
+          if (x < 0 || y < 0 || x >= SIZE || y >= SIZE) continue;
+          bctx.fillStyle = ok ? "rgba(131,243,194,0.35)" : "rgba(224,122,61,0.35)";
+          bctx.fillRect(x * CELL + 2, y * CELL + 2, CELL - 4, CELL - 4);
+        }
+      }
+    }
+    if (gameOver) {
+      bctx.fillStyle = "rgba(0,0,0,0.55)";
+      bctx.fillRect(0, 0, boardCanvas.width, boardCanvas.height);
+      bctx.fillStyle = "#e8e0d4";
+      bctx.font = "bold 22px Courier New, monospace";
+      bctx.textAlign = "center";
+      bctx.fillText("GAME OVER", boardCanvas.width / 2, boardCanvas.height / 2 - 8);
+      bctx.font = "13px Courier New, monospace";
+      bctx.fillText("New Game to play again", boardCanvas.width / 2, boardCanvas.height / 2 + 16);
+      bctx.textAlign = "start";
+    }
+  }
+
+  function drawTray() {
+    tctx.fillStyle = "#0a0908";
+    tctx.fillRect(0, 0, trayCanvas.width, trayCanvas.height);
+    const slotW = trayCanvas.width / 3;
+    const cell = 18;
+    for (let i = 0; i < 3; i++) {
+      const ox = i * slotW;
+      // slot frame
+      tctx.strokeStyle = selected === i ? "#c4a574" : "rgba(196,165,116,0.25)";
+      tctx.lineWidth = selected === i ? 2 : 1;
+      tctx.strokeRect(ox + 6, 8, slotW - 12, trayCanvas.height - 16);
+      const p = pieces[i];
+      if (!p) continue;
+      const { w, h } = shapeSize(p.shape);
+      const startX = ox + (slotW - w * cell) / 2;
+      const startY = (trayCanvas.height - h * cell) / 2;
+      for (let r = 0; r < p.shape.length; r++) {
+        for (let c = 0; c < p.shape[r].length; c++) {
+          if (!p.shape[r][c]) continue;
+          tctx.fillStyle = COLORS[(p.color - 1) % COLORS.length];
+          tctx.fillRect(startX + c * cell + 1, startY + r * cell + 1, cell - 2, cell - 2);
+        }
+      }
+    }
+  }
+
+  function redraw() {
+    drawBoard();
+    drawTray();
+    updateStats();
+  }
+
+  function newGame() {
+    emptyGrid();
+    pieces = [randomPiece(), randomPiece(), randomPiece()];
+    selected = -1;
+    score = 0;
+    clears = 0;
+    gameOver = false;
+    hover = null;
+    setStatus("Pick a piece in the tray, then place it on the board.");
+    redraw();
+  }
+
+  function tryGameOver() {
+    if (!anyMoveLeft()) {
+      gameOver = true;
+      if (score > best) {
+        best = score;
+        try { localStorage.setItem("ceyros-bb-best", String(best)); } catch (e) {}
+      }
+      setStatus("No moves left — Game Over. Score " + score);
+      redraw();
+      return true;
+    }
+    return false;
+  }
+
+  boardCanvas.addEventListener("mousemove", e => {
+    if (gameOver || selected < 0 || !pieces[selected]) { hover = null; drawBoard(); return; }
+    const rect = boardCanvas.getBoundingClientRect();
+    const scaleX = boardCanvas.width / rect.width;
+    const scaleY = boardCanvas.height / rect.height;
+    const px = (e.clientX - rect.left) * scaleX;
+    const py = (e.clientY - rect.top) * scaleY;
+    const p = pieces[selected];
+    const { w, h } = shapeSize(p.shape);
+    // snap so piece center-ish follows cursor
+    let gx = Math.floor(px / CELL) - Math.floor((w - 1) / 2);
+    let gy = Math.floor(py / CELL) - Math.floor((h - 1) / 2);
+    gx = Math.max(0, Math.min(SIZE - w, gx));
+    gy = Math.max(0, Math.min(SIZE - h, gy));
+    hover = { x: gx, y: gy };
+    drawBoard();
   });
-});
+
+  boardCanvas.addEventListener("mouseleave", () => { hover = null; drawBoard(); });
+
+  boardCanvas.addEventListener("click", e => {
+    if (gameOver) return;
+    if (selected < 0 || !pieces[selected]) {
+      setStatus("Select a piece from the tray first.");
+      return;
+    }
+    const rect = boardCanvas.getBoundingClientRect();
+    const scaleX = boardCanvas.width / rect.width;
+    const scaleY = boardCanvas.height / rect.height;
+    const px = (e.clientX - rect.left) * scaleX;
+    const py = (e.clientY - rect.top) * scaleY;
+    const p = pieces[selected];
+    const { w, h } = shapeSize(p.shape);
+    let gx = Math.floor(px / CELL) - Math.floor((w - 1) / 2);
+    let gy = Math.floor(py / CELL) - Math.floor((h - 1) / 2);
+    gx = Math.max(0, Math.min(SIZE - w, gx));
+    gy = Math.max(0, Math.min(SIZE - h, gy));
+    if (!canPlace(p, gx, gy)) {
+      setStatus("Can't place there.");
+      return;
+    }
+    placePiece(p, gx, gy);
+    let gained = 10;
+    for (let r = 0; r < p.shape.length; r++)
+      for (let c = 0; c < p.shape[r].length; c++)
+        if (p.shape[r][c]) gained += 1;
+    gained += clearLines();
+    score += gained;
+    pieces[selected] = null;
+    selected = -1;
+    hover = null;
+    refillPieces();
+    if (score > best) {
+      best = score;
+      try { localStorage.setItem("ceyros-bb-best", String(best)); } catch (e) {}
+    }
+    setStatus("+" + gained + " — pick the next piece.");
+    if (!tryGameOver()) redraw();
+  });
+
+  trayCanvas.addEventListener("click", e => {
+    if (gameOver) return;
+    const rect = trayCanvas.getBoundingClientRect();
+    const scaleX = trayCanvas.width / rect.width;
+    const px = (e.clientX - rect.left) * scaleX;
+    const slot = Math.floor(px / (trayCanvas.width / 3));
+    if (slot < 0 || slot > 2) return;
+    if (!pieces[slot]) {
+      setStatus("That slot is empty.");
+      return;
+    }
+    selected = slot;
+    setStatus("Piece selected — click the board to place.");
+    redraw();
+  });
+
+  // touch support
+  function pointerToBoard(e) {
+    const t = e.changedTouches ? e.changedTouches[0] : e;
+    const rect = boardCanvas.getBoundingClientRect();
+    const scaleX = boardCanvas.width / rect.width;
+    const scaleY = boardCanvas.height / rect.height;
+    return {
+      x: (t.clientX - rect.left) * scaleX,
+      y: (t.clientY - rect.top) * scaleY
+    };
+  }
+
+  boardCanvas.addEventListener("touchstart", e => {
+    e.preventDefault();
+    if (gameOver || selected < 0 || !pieces[selected]) return;
+    const pos = pointerToBoard(e);
+    const p = pieces[selected];
+    const { w, h } = shapeSize(p.shape);
+    let gx = Math.floor(pos.x / CELL) - Math.floor((w - 1) / 2);
+    let gy = Math.floor(pos.y / CELL) - Math.floor((h - 1) / 2);
+    gx = Math.max(0, Math.min(SIZE - w, gx));
+    gy = Math.max(0, Math.min(SIZE - h, gy));
+    hover = { x: gx, y: gy };
+    if (canPlace(p, gx, gy)) {
+      placePiece(p, gx, gy);
+      let gained = 10;
+      for (let r = 0; r < p.shape.length; r++)
+        for (let c = 0; c < p.shape[r].length; c++)
+          if (p.shape[r][c]) gained += 1;
+      gained += clearLines();
+      score += gained;
+      pieces[selected] = null;
+      selected = -1;
+      hover = null;
+      refillPieces();
+      if (score > best) {
+        best = score;
+        try { localStorage.setItem("ceyros-bb-best", String(best)); } catch (err) {}
+      }
+      setStatus("+" + gained);
+      if (!tryGameOver()) redraw();
+    } else {
+      setStatus("Can't place there.");
+      drawBoard();
+    }
+  }, { passive: false });
+
+  trayCanvas.addEventListener("touchstart", e => {
+    e.preventDefault();
+    if (gameOver) return;
+    const t = e.changedTouches[0];
+    const rect = trayCanvas.getBoundingClientRect();
+    const scaleX = trayCanvas.width / rect.width;
+    const px = (t.clientX - rect.left) * scaleX;
+    const slot = Math.floor(px / (trayCanvas.width / 3));
+    if (slot < 0 || slot > 2 || !pieces[slot]) return;
+    selected = slot;
+    setStatus("Piece selected — tap the board.");
+    redraw();
+  }, { passive: false });
+
+  const startBtn = document.getElementById("bbStart");
+  if (startBtn) startBtn.addEventListener("click", newGame);
+
+  newGame();
+})();
+
+
+/* ==================== COIN FLIP ==================== */
+(function coinFlipGame() {
+  const canvas = document.getElementById("cfCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let streak = 0, wins = 0, losses = 0, spinning = false;
+
+  function drawCoin(face, angle) {
+    ctx.clearRect(0, 0, 220, 220);
+    ctx.save();
+    ctx.translate(110, 110);
+    ctx.rotate(angle || 0);
+    const isGold = face === "gold";
+    const grd = ctx.createRadialGradient(-20, -20, 10, 0, 0, 90);
+    grd.addColorStop(0, isGold ? "#f5e6a6" : "#e8eef5");
+    grd.addColorStop(1, isGold ? "#c4a574" : "#9aa3ad");
+    ctx.beginPath();
+    ctx.arc(0, 0, 80, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+    ctx.strokeStyle = isGold ? "#8a6a2b" : "#6a7380";
+    ctx.lineWidth = 6;
+    ctx.stroke();
+    ctx.fillStyle = isGold ? "#5c3d10" : "#3a4450";
+    ctx.font = "bold 22px Courier New, monospace";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(isGold ? "GOLD" : "SILVER", 0, 0);
+    ctx.restore();
+  }
+  drawCoin("gold", 0);
+
+  function setStats() {
+    const a = document.getElementById("cfStreak");
+    const b = document.getElementById("cfWins");
+    const c = document.getElementById("cfLosses");
+    if (a) a.textContent = String(streak);
+    if (b) b.textContent = String(wins);
+    if (c) c.textContent = String(losses);
+  }
+  function setStatus(m) {
+    const el = document.getElementById("cfStatus");
+    if (el) el.textContent = m;
+  }
+
+  function flip(choice) {
+    if (spinning) return;
+    spinning = true;
+    setStatus("Flipping…");
+    const result = Math.random() < 0.5 ? "gold" : "silver";
+    let frame = 0;
+    const total = 24;
+    (function anim() {
+      frame++;
+      const face = frame % 2 === 0 ? "gold" : "silver";
+      drawCoin(face, frame * 0.45);
+      if (frame < total) requestAnimationFrame(anim);
+      else {
+        drawCoin(result, 0);
+        const win = result === choice;
+        if (win) { wins++; streak++; setStatus("You won — " + result.toUpperCase() + "!"); }
+        else { losses++; streak = 0; setStatus("You lost — it was " + result.toUpperCase() + "."); }
+        setStats();
+        spinning = false;
+      }
+    })();
+  }
+
+  const g = document.getElementById("cfGold");
+  const s = document.getElementById("cfSilver");
+  const r = document.getElementById("cfReset");
+  if (g) g.addEventListener("click", () => flip("gold"));
+  if (s) s.addEventListener("click", () => flip("silver"));
+  if (r) r.addEventListener("click", () => { streak = wins = losses = 0; setStats(); setStatus("Stats reset."); drawCoin("gold", 0); });
+})();
+
+/* ==================== MINES ==================== */
+(function minesGame() {
+  const canvas = document.getElementById("mnCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const N = 5, CELL = 64;
+  let mines = 3, grid = [], revealed = [], alive = false, safe = 0;
+
+  function multiFromSafe(s) {
+    // simple rising multi
+    return (1 + s * (0.15 + mines * 0.04)).toFixed(2);
+  }
+  function updateUI() {
+    const a = document.getElementById("mnSafe");
+    const b = document.getElementById("mnMulti");
+    const c = document.getElementById("mnState");
+    if (a) a.textContent = String(safe);
+    if (b) b.textContent = multiFromSafe(safe) + "×";
+    if (c) c.textContent = alive ? "playing" : "idle";
+    const cash = document.getElementById("mnCash");
+    if (cash) cash.disabled = !alive || safe === 0;
+  }
+  function setStatus(m) {
+    const el = document.getElementById("mnStatus");
+    if (el) el.textContent = m;
+  }
+  function draw() {
+    ctx.fillStyle = "#0a0908";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (let y = 0; y < N; y++) {
+      for (let x = 0; x < N; x++) {
+        const i = y * N + x;
+        const px = x * CELL, py = y * CELL;
+        if (revealed[i]) {
+          if (grid[i]) {
+            ctx.fillStyle = "#e07a3d";
+            ctx.fillRect(px + 3, py + 3, CELL - 6, CELL - 6);
+            ctx.fillStyle = "#1a1008";
+            ctx.font = "bold 22px Courier New";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText("*", px + CELL / 2, py + CELL / 2);
+          } else {
+            ctx.fillStyle = "#1a2820";
+            ctx.fillRect(px + 3, py + 3, CELL - 6, CELL - 6);
+            ctx.fillStyle = "#83f3c2";
+            ctx.font = "bold 16px Courier New";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText("OK", px + CELL / 2, py + CELL / 2);
+          }
+        } else {
+          ctx.fillStyle = "#1c1814";
+          ctx.fillRect(px + 3, py + 3, CELL - 6, CELL - 6);
+          ctx.strokeStyle = "rgba(196,165,116,0.3)";
+          ctx.strokeRect(px + 3.5, py + 3.5, CELL - 7, CELL - 7);
+        }
+      }
+    }
+  }
+  function newBoard() {
+    const cntEl = document.getElementById("mnCount");
+    mines = cntEl ? parseInt(cntEl.value, 10) || 3 : 3;
+    mines = Math.max(1, Math.min(12, mines));
+    grid = Array(N * N).fill(0);
+    revealed = Array(N * N).fill(0);
+    let placed = 0;
+    while (placed < mines) {
+      const i = Math.floor(Math.random() * N * N);
+      if (!grid[i]) { grid[i] = 1; placed++; }
+    }
+    alive = true;
+    safe = 0;
+    updateUI();
+    setStatus("Board ready — " + mines + " mines. Click safe tiles.");
+    draw();
+  }
+  function revealAll() {
+    for (let i = 0; i < revealed.length; i++) revealed[i] = 1;
+  }
+  function clickCell(x, y) {
+    if (!alive) return;
+    const i = y * N + x;
+    if (revealed[i]) return;
+    revealed[i] = 1;
+    if (grid[i]) {
+      alive = false;
+      revealAll();
+      setStatus("BOOM — mine. Multi lost.");
+      updateUI();
+      draw();
+      return;
+    }
+    safe++;
+    updateUI();
+    const remain = N * N - mines - safe;
+    if (remain <= 0) {
+      alive = false;
+      setStatus("Cleared all safe tiles! Multi " + multiFromSafe(safe) + "×");
+    } else {
+      setStatus("Safe. Multi " + multiFromSafe(safe) + "× — keep going or cash out.");
+    }
+    draw();
+  }
+
+  canvas.addEventListener("click", e => {
+    const rect = canvas.getBoundingClientRect();
+    const sx = canvas.width / rect.width, sy = canvas.height / rect.height;
+    const x = Math.floor(((e.clientX - rect.left) * sx) / CELL);
+    const y = Math.floor(((e.clientY - rect.top) * sy) / CELL);
+    if (x >= 0 && y >= 0 && x < N && y < N) clickCell(x, y);
+  });
+
+  const range = document.getElementById("mnCount");
+  const rangeVal = document.getElementById("mnCountVal");
+  if (range) range.addEventListener("input", () => { if (rangeVal) rangeVal.textContent = range.value; });
+  const start = document.getElementById("mnStart");
+  if (start) start.addEventListener("click", newBoard);
+  const cash = document.getElementById("mnCash");
+  if (cash) cash.addEventListener("click", () => {
+    if (!alive || safe === 0) return;
+    alive = false;
+    setStatus("Cashed out at " + multiFromSafe(safe) + "× with " + safe + " safe tiles.");
+    updateUI();
+  });
+  draw();
+})();
+
+/* ==================== 2048 ==================== */
+(function game2048() {
+  const canvas = document.getElementById("g2Canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const N = 4, CELL = 90;
+  let grid = [], score = 0, best = 0;
+  try { best = parseInt(localStorage.getItem("ceyros-2048-best") || "0", 10) || 0; } catch (e) {}
+
+  const COLORS = {
+    0: "#1a1612", 2: "#3d3428", 4: "#4a3c2a", 8: "#c45c28", 16: "#e07a3d",
+    32: "#e8a060", 64: "#c4a574", 128: "#83f3c2", 256: "#73caff", 512: "#ff8fa3",
+    1024: "#f1c40f", 2048: "#e8e0d4"
+  };
+
+  function empty() { return Array.from({ length: N }, () => Array(N).fill(0)); }
+  function spawn() {
+    const free = [];
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) if (!grid[y][x]) free.push([x, y]);
+    if (!free.length) return;
+    const [x, y] = free[Math.floor(Math.random() * free.length)];
+    grid[y][x] = Math.random() < 0.9 ? 2 : 4;
+  }
+  function updateUI() {
+    const a = document.getElementById("g2Score");
+    const b = document.getElementById("g2Best");
+    if (a) a.textContent = String(score);
+    if (b) b.textContent = String(best);
+  }
+  function setStatus(m) {
+    const el = document.getElementById("g2Status");
+    if (el) el.textContent = m;
+  }
+  function draw() {
+    ctx.fillStyle = "#0a0908";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (let y = 0; y < N; y++) {
+      for (let x = 0; x < N; x++) {
+        const v = grid[y][x];
+        const px = x * CELL + 4, py = y * CELL + 4;
+        ctx.fillStyle = COLORS[v] || "#e8e0d4";
+        ctx.fillRect(px, py, CELL - 8, CELL - 8);
+        if (v) {
+          ctx.fillStyle = v >= 8 ? "#0a0908" : "#e8e0d4";
+          ctx.font = (v >= 1000 ? "bold 22px" : "bold 28px") + " Courier New, monospace";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(String(v), px + (CELL - 8) / 2, py + (CELL - 8) / 2);
+        }
+      }
+    }
+  }
+  function slideRow(row) {
+    const arr = row.filter(v => v);
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] === arr[i + 1]) {
+        arr[i] *= 2;
+        score += arr[i];
+        arr[i + 1] = 0;
+      }
+    }
+    const out = arr.filter(v => v);
+    while (out.length < N) out.push(0);
+    return out;
+  }
+  function rotateCW(g) {
+    const n = empty();
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) n[x][N - 1 - y] = g[y][x];
+    return n;
+  }
+  function move(dir) {
+    // 0 left, 1 up, 2 right, 3 down via rotations
+    let g = grid.map(r => r.slice());
+    let rot = dir;
+    for (let i = 0; i < rot; i++) g = rotateCW(g);
+    let moved = false;
+    for (let y = 0; y < N; y++) {
+      const before = g[y].slice();
+      g[y] = slideRow(g[y]);
+      if (before.some((v, i) => v !== g[y][i])) moved = true;
+    }
+    for (let i = 0; i < (4 - rot) % 4; i++) g = rotateCW(g);
+    if (!moved) return;
+    grid = g;
+    spawn();
+    if (score > best) {
+      best = score;
+      try { localStorage.setItem("ceyros-2048-best", String(best)); } catch (e) {}
+    }
+    updateUI();
+    draw();
+    if (!canMove()) setStatus("Game over — no moves left.");
+    else setStatus("Score " + score);
+  }
+  function canMove() {
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      if (!grid[y][x]) return true;
+      if (x + 1 < N && grid[y][x] === grid[y][x + 1]) return true;
+      if (y + 1 < N && grid[y][x] === grid[y + 1][x]) return true;
+    }
+    return false;
+  }
+  function newGame() {
+    grid = empty();
+    score = 0;
+    spawn(); spawn();
+    updateUI();
+    setStatus("Use arrows or WASD.");
+    draw();
+  }
+  document.addEventListener("keydown", e => {
+    if (document.getElementById("gamesPanel").style.display !== "block") return;
+    if (!document.getElementById("g2048View").classList.contains("active")) return;
+    const map = { ArrowLeft: 0, a: 0, A: 0, ArrowUp: 1, w: 1, W: 1, ArrowRight: 2, d: 2, D: 2, ArrowDown: 3, s: 3, S: 3 };
+    if (map[e.key] !== undefined) { e.preventDefault(); move(map[e.key]); }
+  });
+  document.querySelectorAll("[data-g2]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const m = { left: 0, up: 1, right: 2, down: 3 };
+      if (m[btn.dataset.g2] !== undefined) move(m[btn.dataset.g2]);
+    });
+  });
+  const start = document.getElementById("g2Start");
+  if (start) start.addEventListener("click", newGame);
+  newGame();
+})();
+
+/* ==================== FLAPPY BIRD ==================== */
+(function flappyGame() {
+  const canvas = document.getElementById("fpCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let birdY = 200, vel = 0, pipes = [], score = 0, best = 0, running = false, anim = null;
+  try { best = parseInt(localStorage.getItem("ceyros-flappy-best") || "0", 10) || 0; } catch (e) {}
+  const G = 0.22, FLAP = -5.8, GAP = 210, SPEED = 1.45;
+
+  function updateUI() {
+    const a = document.getElementById("fpScore");
+    const b = document.getElementById("fpBest");
+    if (a) a.textContent = String(score);
+    if (b) b.textContent = String(best);
+  }
+  function setStatus(m) {
+    const el = document.getElementById("fpStatus");
+    if (el) el.textContent = m;
+  }
+  function reset() {
+    birdY = 200; vel = 0; pipes = []; score = 0; running = false;
+    if (anim) cancelAnimationFrame(anim);
+    updateUI();
+    draw(true);
+    setStatus("Press Start, then flap.");
+  }
+  function addPipe() {
+    const top = 40 + Math.random() * 200;
+    pipes.push({ x: canvas.width + 10, top: top, passed: false });
+  }
+  function flap() {
+    if (!running) return;
+    vel = FLAP;
+  }
+  function draw(idle) {
+    ctx.fillStyle = "#0a0908";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // pipes
+    ctx.fillStyle = "#c4a574";
+    pipes.forEach(p => {
+      ctx.fillRect(p.x, 0, 44, p.top);
+      ctx.fillRect(p.x, p.top + GAP, 44, canvas.height - (p.top + GAP));
+    });
+    // bird
+    ctx.fillStyle = "#e07a3d";
+    ctx.fillRect(70, birdY, 22, 18);
+    ctx.fillStyle = "#e8e0d4";
+    ctx.fillRect(84, birdY + 4, 6, 6);
+    if (idle) {
+      ctx.fillStyle = "rgba(232,224,212,0.7)";
+      ctx.font = "14px Courier New";
+      ctx.textAlign = "center";
+      ctx.fillText("FLAPPY", canvas.width / 2, canvas.height / 2);
+    }
+  }
+  function loop() {
+    if (!running) return;
+    vel += G;
+    birdY += vel;
+    if (pipes.length === 0 || pipes[pipes.length - 1].x < canvas.width - 250) addPipe();
+    for (const p of pipes) {
+      p.x -= SPEED;
+      if (!p.passed && p.x + 44 < 70) {
+        p.passed = true;
+        score++;
+        if (score > best) {
+          best = score;
+          try { localStorage.setItem("ceyros-flappy-best", String(best)); } catch (e) {}
+        }
+        updateUI();
+      }
+      // collision
+      if (70 + 22 > p.x && 70 < p.x + 44) {
+        if (birdY < p.top || birdY + 18 > p.top + GAP) {
+          running = false;
+          setStatus("Crashed — score " + score);
+          draw(false);
+          return;
+        }
+      }
+    }
+    pipes = pipes.filter(p => p.x > -50);
+    if (birdY < 0 || birdY + 18 > canvas.height) {
+      running = false;
+      setStatus("Crashed — score " + score);
+      draw(false);
+      return;
+    }
+    draw(false);
+    anim = requestAnimationFrame(loop);
+  }
+  function start() {
+    birdY = 200; vel = 0; pipes = []; score = 0; running = true;
+    updateUI();
+    setStatus("Flap!");
+    if (anim) cancelAnimationFrame(anim);
+    anim = requestAnimationFrame(loop);
+  }
+  document.getElementById("fpStart")?.addEventListener("click", start);
+  canvas.addEventListener("click", flap);
+  canvas.addEventListener("touchstart", e => { e.preventDefault(); flap(); }, { passive: false });
+  document.addEventListener("keydown", e => {
+    if (document.getElementById("gamesPanel").style.display !== "block") return;
+    if (!document.getElementById("flappyView")?.classList.contains("active")) return;
+    if (e.key === " " || e.key === "ArrowUp") { e.preventDefault(); flap(); }
+  });
+  reset();
+})();
+
+/* ==================== PASSWORD GENERATOR ==================== */
+(function passgen() {
+  const out = document.getElementById("pgOutput");
+  if (!out) return;
+  const len = document.getElementById("pgLen");
+  const lenVal = document.getElementById("pgLenVal");
+  if (len && lenVal) len.addEventListener("input", () => { lenVal.textContent = len.value; });
+
+  function charset() {
+    const avoid = !!(document.getElementById("pgAmbiguous") && document.getElementById("pgAmbiguous").checked);
+    let s = "";
+    if (document.getElementById("pgUpper") && document.getElementById("pgUpper").checked)
+      s += avoid ? "ABCDEFGHJKLMNPQRSTUVWXYZ" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (document.getElementById("pgLower") && document.getElementById("pgLower").checked)
+      s += avoid ? "abcdefghijkmnopqrstuvwxyz" : "abcdefghijklmnopqrstuvwxyz";
+    if (document.getElementById("pgDigits") && document.getElementById("pgDigits").checked)
+      s += avoid ? "23456789" : "0123456789";
+    if (document.getElementById("pgSymbols") && document.getElementById("pgSymbols").checked)
+      s += avoid ? "!@#$%^&*-_=+?" : "!@#$%^&*()-_=+[]{}|;:,.<>?/";
+    return s;
+  }
+  function generate() {
+    const cs = charset();
+    const n = parseInt(len?.value || "24", 10) || 24;
+    const strength = document.getElementById("pgStrength");
+    if (!cs) {
+      out.value = "";
+      if (strength) strength.textContent = "Select at least one character set.";
+      return;
+    }
+    const arr = new Uint32Array(n);
+    crypto.getRandomValues(arr);
+    let pw = "";
+    for (let i = 0; i < n; i++) pw += cs[arr[i] % cs.length];
+    out.value = pw;
+    const bits = Math.log2(Math.pow(cs.length, n));
+    if (strength) strength.textContent = "Entropy ~" + bits.toFixed(0) + " bits · length " + n + " · alphabet " + cs.length;
+  }
+  document.getElementById("pgGenerate")?.addEventListener("click", generate);
+  document.getElementById("pgCopy")?.addEventListener("click", async () => {
+    if (!out.value) return;
+    try {
+      await navigator.clipboard.writeText(out.value);
+      const s = document.getElementById("pgStrength");
+      if (s) s.textContent = "Copied.";
+    } catch (e) {
+      out.select();
+      document.execCommand("copy");
+    }
+  });
+})();
+
+
+
+/* ==================== SNAKE ==================== */
+(function snakeGame() {
+  const canvas = document.getElementById("snCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const CELL = 20, COLS = 18, ROWS = 18;
+  let snake, dir, nextDir, food, score, best = 0, running = false, timer = null;
+  try { best = parseInt(localStorage.getItem("ceyros-snake-best") || "0", 10) || 0; } catch (e) {}
+
+  function updateUI() {
+    const a = document.getElementById("snScore");
+    const b = document.getElementById("snBest");
+    const c = document.getElementById("snLen");
+    if (a) a.textContent = String(score);
+    if (b) b.textContent = String(best);
+    if (c) c.textContent = String(snake ? snake.length : 0);
+  }
+  function setStatus(m) {
+    const el = document.getElementById("snStatus");
+    if (el) el.textContent = m;
+  }
+  function placeFood() {
+    while (true) {
+      const x = Math.floor(Math.random() * COLS);
+      const y = Math.floor(Math.random() * ROWS);
+      if (!snake.some(s => s.x === x && s.y === y)) { food = { x, y }; return; }
+    }
+  }
+  function draw() {
+    ctx.fillStyle = "#0a0908";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // grid faint
+    ctx.strokeStyle = "rgba(196,165,116,0.08)";
+    for (let i = 0; i <= COLS; i++) {
+      ctx.beginPath(); ctx.moveTo(i * CELL + 0.5, 0); ctx.lineTo(i * CELL + 0.5, ROWS * CELL); ctx.stroke();
+    }
+    for (let i = 0; i <= ROWS; i++) {
+      ctx.beginPath(); ctx.moveTo(0, i * CELL + 0.5); ctx.lineTo(COLS * CELL, i * CELL + 0.5); ctx.stroke();
+    }
+    // food
+    ctx.fillStyle = "#e07a3d";
+    ctx.fillRect(food.x * CELL + 2, food.y * CELL + 2, CELL - 4, CELL - 4);
+    // snake
+    snake.forEach((s, i) => {
+      ctx.fillStyle = i === 0 ? "#83f3c2" : "#c4a574";
+      ctx.fillRect(s.x * CELL + 1, s.y * CELL + 1, CELL - 2, CELL - 2);
+    });
+  }
+  function step() {
+    if (!running) return;
+    dir = nextDir;
+    const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
+    if (head.x < 0 || head.y < 0 || head.x >= COLS || head.y >= ROWS ||
+        snake.some(s => s.x === head.x && s.y === head.y)) {
+      running = false;
+      if (timer) clearInterval(timer);
+      setStatus("Game over — score " + score);
+      return;
+    }
+    snake.unshift(head);
+    if (head.x === food.x && head.y === food.y) {
+      score += 10;
+      if (score > best) {
+        best = score;
+        try { localStorage.setItem("ceyros-snake-best", String(best)); } catch (e) {}
+      }
+      placeFood();
+    } else {
+      snake.pop();
+    }
+    updateUI();
+    draw();
+  }
+  function speedMs() {
+    // 1=slow beginner … 5=fast  → 220ms … 55ms
+    const el = document.getElementById("snSpeed");
+    const lvl = el ? parseInt(el.value, 10) || 3 : 3;
+    const map = { 1: 220, 2: 160, 3: 110, 4: 80, 5: 55 };
+    return map[lvl] || 110;
+  }
+  function speedLabel(lvl) {
+    return ({ 1: "Slow", 2: "Easy", 3: "Normal", 4: "Fast", 5: "Insane" })[lvl] || "Normal";
+  }
+  function start() {
+    snake = [{ x: 8, y: 9 }, { x: 7, y: 9 }, { x: 6, y: 9 }];
+    dir = { x: 1, y: 0 };
+    nextDir = { x: 1, y: 0 };
+    score = 0;
+    placeFood();
+    running = true;
+    updateUI();
+    const lvl = document.getElementById("snSpeed") ? parseInt(document.getElementById("snSpeed").value, 10) : 3;
+    setStatus("Go! (" + speedLabel(lvl) + ")");
+    draw();
+    if (timer) clearInterval(timer);
+    timer = setInterval(step, speedMs());
+  }
+  function setDir(nx, ny) {
+    // no instant reverse
+    if (dir.x === -nx && dir.y === -ny) return;
+    nextDir = { x: nx, y: ny };
+  }
+  document.addEventListener("keydown", e => {
+    if (document.getElementById("gamesPanel").style.display !== "block") return;
+    if (!document.getElementById("snakeView")?.classList.contains("active")) return;
+    const k = e.key;
+    if (k === "ArrowUp" || k === "w" || k === "W") { e.preventDefault(); setDir(0, -1); }
+    else if (k === "ArrowDown" || k === "s" || k === "S") { e.preventDefault(); setDir(0, 1); }
+    else if (k === "ArrowLeft" || k === "a" || k === "A") { e.preventDefault(); setDir(-1, 0); }
+    else if (k === "ArrowRight" || k === "d" || k === "D") { e.preventDefault(); setDir(1, 0); }
+  });
+  document.querySelectorAll("[data-sn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const m = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
+      const v = m[btn.dataset.sn];
+      if (v) setDir(v[0], v[1]);
+    });
+  });
+  document.getElementById("snStart")?.addEventListener("click", start);
+  const snSpeed = document.getElementById("snSpeed");
+  const snSpeedVal = document.getElementById("snSpeedVal");
+  if (snSpeed && snSpeedVal) {
+    const sync = () => {
+      const lvl = parseInt(snSpeed.value, 10) || 3;
+      snSpeedVal.textContent = ({ 1: "Slow", 2: "Easy", 3: "Normal", 4: "Fast", 5: "Insane" })[lvl] || "Normal";
+    };
+    snSpeed.addEventListener("input", sync);
+    sync();
+  }
+  // idle draw
+  snake = [{ x: 8, y: 9 }, { x: 7, y: 9 }, { x: 6, y: 9 }];
+  food = { x: 12, y: 9 };
+  score = 0;
+  updateUI();
+  draw();
+})();
+
+
+
+/* ==================== BLACKJACK ==================== */
+(function blackjackGame() {
+  const canvas = document.getElementById("bjCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let bank = 1000, bet = 50, deck = [], player = [], dealer = [], phase = "bet"; // bet|play|done
+
+  function newDeck() {
+    const suits = ["♠", "♥", "♦", "♣"];
+    const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    const d = [];
+    for (const s of suits) for (const r of ranks) d.push({ r, s });
+    for (let i = d.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [d[i], d[j]] = [d[j], d[i]];
+    }
+    return d;
+  }
+  function val(hand) {
+    let t = 0, aces = 0;
+    for (const c of hand) {
+      if (c.r === "A") { aces++; t += 11; }
+      else if ("JQK".includes(c.r)) t += 10;
+      else t += parseInt(c.r, 10);
+    }
+    while (t > 21 && aces > 0) { t -= 10; aces--; }
+    return t;
+  }
+  function setStatus(m) {
+    const el = document.getElementById("bjStatus");
+    if (el) el.textContent = m;
+  }
+  function updateUI() {
+    const a = document.getElementById("bjBank");
+    const b = document.getElementById("bjBetLabel");
+    const c = document.getElementById("bjResult");
+    if (a) a.textContent = String(bank);
+    if (b) b.textContent = String(bet);
+    if (c) {
+      if (phase === "play") c.textContent = "playing";
+      else if (phase === "bet") c.textContent = "—";
+    }
+    const hit = document.getElementById("bjHit");
+    const stand = document.getElementById("bjStand");
+    const deal = document.getElementById("bjDeal");
+    if (hit) hit.disabled = phase !== "play";
+    if (stand) stand.disabled = phase !== "play";
+    if (deal) deal.disabled = phase === "play";
+  }
+  function drawCard(c, x, y, hide) {
+    ctx.fillStyle = "#f5f0e6";
+    ctx.strokeStyle = "#c4a574";
+    ctx.lineWidth = 2;
+    ctx.fillRect(x, y, 56, 80);
+    ctx.strokeRect(x + 0.5, y + 0.5, 55, 79);
+    if (hide) {
+      ctx.fillStyle = "#1a1612";
+      ctx.fillRect(x + 6, y + 6, 44, 68);
+      ctx.fillStyle = "#c4a574";
+      ctx.font = "bold 14px Courier New";
+      ctx.textAlign = "center";
+      ctx.fillText("?", x + 28, y + 46);
+      return;
+    }
+    const red = c.s === "♥" || c.s === "♦";
+    ctx.fillStyle = red ? "#c45c28" : "#1a1612";
+    ctx.font = "bold 16px Courier New";
+    ctx.textAlign = "left";
+    ctx.fillText(c.r, x + 6, y + 20);
+    ctx.font = "18px Courier New";
+    ctx.fillText(c.s, x + 6, y + 42);
+  }
+  function draw() {
+    ctx.fillStyle = "#0a1810";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#c4a574";
+    ctx.font = "13px Courier New";
+    ctx.textAlign = "left";
+    ctx.fillText("Dealer" + (phase !== "bet" ? " (" + (phase === "play" ? "?" : val(dealer)) + ")" : ""), 16, 22);
+    ctx.fillText("You" + (player.length ? " (" + val(player) + ")" : ""), 16, 200);
+    dealer.forEach((c, i) => drawCard(c, 16 + i * 64, 36, phase === "play" && i === 0));
+    player.forEach((c, i) => drawCard(c, 16 + i * 64, 214, false));
+  }
+  function deal() {
+    if (phase === "play") return;
+    bet = parseInt(document.getElementById("bjBet")?.value || "50", 10) || 50;
+    if (bet > bank) { setStatus("Bet exceeds bank."); return; }
+    if (bank <= 0) { setStatus("Bank empty — reset."); return; }
+    deck = newDeck();
+    player = [deck.pop(), deck.pop()];
+    dealer = [deck.pop(), deck.pop()];
+    phase = "play";
+    bank -= bet;
+    updateUI();
+    draw();
+    if (val(player) === 21) {
+      // blackjack
+      finish(true, true);
+    } else setStatus("Hit or Stand.");
+  }
+  function finish(playerDone, natural) {
+    phase = "done";
+    // dealer draws to 17
+    while (val(dealer) < 17) dealer.push(deck.pop());
+    const pv = val(player), dv = val(dealer);
+    let msg = "";
+    if (natural && pv === 21) {
+      const win = Math.floor(bet * 2.5);
+      bank += win;
+      msg = "Blackjack! +" + win;
+      document.getElementById("bjResult").textContent = "BJ";
+    } else if (pv > 21) {
+      msg = "Bust — you lose.";
+      document.getElementById("bjResult").textContent = "lose";
+    } else if (dv > 21 || pv > dv) {
+      bank += bet * 2;
+      msg = "You win! +" + (bet * 2);
+      document.getElementById("bjResult").textContent = "win";
+    } else if (pv === dv) {
+      bank += bet;
+      msg = "Push — bet returned.";
+      document.getElementById("bjResult").textContent = "push";
+    } else {
+      msg = "Dealer wins.";
+      document.getElementById("bjResult").textContent = "lose";
+    }
+    setStatus(msg);
+    updateUI();
+    draw();
+    phase = "bet";
+    updateUI();
+  }
+  function hit() {
+    if (phase !== "play") return;
+    player.push(deck.pop());
+    draw();
+    if (val(player) > 21) finish(true, false);
+    else if (val(player) === 21) finish(true, false);
+    else setStatus("Hit or Stand. You: " + val(player));
+    updateUI();
+  }
+  function stand() {
+    if (phase !== "play") return;
+    finish(true, false);
+  }
+
+  document.getElementById("bjDeal")?.addEventListener("click", deal);
+  document.getElementById("bjHit")?.addEventListener("click", hit);
+  document.getElementById("bjStand")?.addEventListener("click", stand);
+  document.getElementById("bjNewBank")?.addEventListener("click", () => {
+    bank = 1000; phase = "bet"; player = []; dealer = [];
+    setStatus("Bank reset to 1000.");
+    updateUI(); draw();
+  });
+  const betEl = document.getElementById("bjBet");
+  const betVal = document.getElementById("bjBetVal");
+  if (betEl) betEl.addEventListener("input", () => {
+    bet = parseInt(betEl.value, 10) || 50;
+    if (betVal) betVal.textContent = String(bet);
+    document.getElementById("bjBetLabel").textContent = String(bet);
+  });
+  updateUI();
+  draw();
+})();
+
+
+/* GAME SELECT */
+(function gameSelect() {
+  function showGamesHub() {
+    document.querySelectorAll("#gamesPanel .game-view").forEach(v => v.classList.remove("active"));
+    const hub = document.getElementById("gamesSelectView");
+    if (hub) hub.classList.add("active");
+  }
+  function openGame(id) {
+    document.querySelectorAll("#gamesPanel .game-view").forEach(v => v.classList.remove("active"));
+    const view = document.getElementById(id + "View");
+    if (view) view.classList.add("active");
+    // ensure back button exists
+    let bar = view.querySelector(".game-back-bar");
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.className = "game-back-bar";
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = "← Game Select";
+      btn.addEventListener("click", showGamesHub);
+      bar.appendChild(btn);
+      view.insertBefore(bar, view.firstChild);
+    }
+  }
+  document.querySelectorAll(".game-select-card").forEach(card => {
+    card.addEventListener("click", () => openGame(card.dataset.game));
+  });
+  // legacy subtabs if any remain
+  document.querySelectorAll(".game-subtab").forEach(btn => {
+    btn.addEventListener("click", () => openGame(btn.dataset.game));
+  });
+  window.showGamesHub = showGamesHub;
+  window.openGame = openGame;
+})();
 
 /* TABS */
 document.querySelectorAll(".tab-button").forEach(button => {
@@ -5230,6 +7366,8 @@ document.querySelectorAll(".tab-button").forEach(button => {
     if (humEl) humEl.style.display = mode === "humanize" ? "block" : "none";
     const cheatsEl = document.getElementById("cheatsPanel");
     if (cheatsEl) cheatsEl.style.display = mode === "cheats" ? "block" : "none";
+    const passEl = document.getElementById("passgenPanel");
+    if (passEl) passEl.style.display = mode === "passgen" ? "block" : "none";
     const vocabEl = document.getElementById("vocabPanel");
     if (vocabEl) vocabEl.style.display = mode === "vocab" ? "block" : "none";
     const jarEl = document.getElementById("jarPanel");
@@ -7597,27 +9735,31 @@ var QRCodeLib = {
   }
 };
 
-function applyTheme(isDark) {
-  // Ryoku-style dark is default. light-mode is the opt-in.
-  document.body.classList.toggle("light-mode", !isDark);
+function applyTheme(oldSchool) {
+  // Old school (default): CRT scanlines, square chrome. Modern: clean rounded UI.
+  document.body.classList.toggle("modern-mode", !oldSchool);
+  document.body.classList.remove("light-mode");
   document.body.classList.remove("dark-mode");
   var btn = document.getElementById("themeToggle");
-  if (btn) btn.textContent = isDark ? "[*]" : "[o]";
-  try { localStorage.setItem("ceyros-theme", isDark ? "dark" : "light"); } catch (e) {}
+  if (btn) {
+    btn.textContent = oldSchool ? "[OS]" : "[MD]";
+    btn.title = oldSchool ? "Old school mode (click for Modern)" : "Modern mode (click for Old school)";
+  }
+  try { localStorage.setItem("ceyros-theme", oldSchool ? "oldschool" : "modern"); } catch (e) {}
 }
 
 (function themeInit() {
-  var dark = true; // default to Ryoku dark
+  var oldSchool = true;
   try {
     var stored = localStorage.getItem("ceyros-theme");
-    if (stored === "light") dark = false;
-    else if (stored === "dark") dark = true;
+    if (stored === "modern" || stored === "light") oldSchool = false;
+    else if (stored === "oldschool" || stored === "dark") oldSchool = true;
   } catch (e) {}
-  applyTheme(dark);
+  applyTheme(oldSchool);
   var btn = document.getElementById("themeToggle");
   if (btn) {
     btn.addEventListener("click", function () {
-      applyTheme(document.body.classList.contains("light-mode"));
+      applyTheme(document.body.classList.contains("modern-mode"));
     });
   }
 })();
@@ -8556,6 +10698,34 @@ if (document.readyState === "loading") {
       file: "emacs-commands.txt",
       blurb: "Common Emacs keys",
       body: "EMACS BASICS\n============\nC = Ctrl, M = Alt/Meta\n\n  C-x C-f     find/open file\n  C-x C-s     save\n  C-x C-c     quit\n  C-g         cancel\n  C-x b       switch buffer\n  C-x 2 / 3   split windows\n  C-x o       other window\n  C-s / C-r   search forward/back\n  C-k         kill line\n  C-y         yank (paste)\n  C-space     set mark\n  M-w / C-w   copy / cut region\n  M-x         run command\n"
+    },
+    {
+      id: "pacman",
+      title: "pacman (Arch)",
+      file: "pacman-commands.txt",
+      blurb: "Install, search, update, remove on Arch",
+      body: "PACMAN CHEAT SHEET\n==================\n\nINSTALL / UPDATE\n  sudo pacman -Syu              full system upgrade\n  sudo pacman -S pkg            install package\n  sudo pacman -S pkg1 pkg2      install several\n  sudo pacman -U file.pkg.tar.zst  install local file\n\nSEARCH\n  pacman -Ss keyword            search remote\n  pacman -Qs keyword            search installed\n  pacman -Qi pkg                package info\n  pacman -Ql pkg                list files\n  pacman -Qo /path/file         which package owns file\n\nREMOVE\n  sudo pacman -R pkg            remove\n  sudo pacman -Rs pkg           remove + deps\n  sudo pacman -Rns pkg          remove + deps + configs\n\nCLEAN\n  sudo pacman -Sc               clean old package cache\n  sudo pacman -Scc              clean all cache\n  pacman -Qdt                   orphaned packages\n  sudo pacman -Rns $(pacman -Qdtq)  remove orphans\n\nOTHER\n  pacman -Qe                    explicitly installed\n  pacman -Qm                    foreign (AUR) packages\n  # AUR helpers: yay / paru (not official pacman)\n"
+    },
+    {
+      id: "hyprland",
+      title: "Hyprland binds",
+      file: "hyprland-binds.txt",
+      blurb: "Common Hyprland keybinds & config tips",
+      body: "HYPRLAND BINDS CHEAT SHEET\n==========================\nDefault-style binds (check your hyprland.conf)\n\nWINDOW\n  Super + Return        terminal\n  Super + Q             close window\n  Super + M             exit Hyprland\n  Super + E             file manager\n  Super + V             toggle floating\n  Super + F             fullscreen\n  Super + arrows / HJKL move focus\n  Super + Shift + arrows  move window\n  Super + mouse drag    move / resize\n\nWORKSPACES\n  Super + 1..9          switch workspace\n  Super + Shift + 1..9  move window to workspace\n  Super + S             toggle special workspace\n  Super + mouse scroll  next/prev workspace\n\nCONFIG (~/.config/hypr/hyprland.conf)\n  bind = SUPER, Return, exec, kitty\n  bind = SUPER, Q, killactive,\n  bind = SUPER, M, exit,\n  bind = SUPER, V, togglefloating,\n  bind = SUPER, F, fullscreen,\n  general:gaps_in / gaps_out\n  decoration:rounding\n  animations:enabled\n\nRELOAD\n  hyprctl reload\n  hyprctl dispatch workspace 2\n"
+    },
+    {
+      id: "gitfull",
+      title: "Git (expanded)",
+      file: "git-expanded.txt",
+      blurb: "Status, branch, rebase, stash, undo",
+      body: "GIT EXPANDED CHEAT SHEET\n========================\n\nDAILY\n  git status -sb\n  git add -p\n  git commit -m \"msg\"\n  git push\n  git pull --rebase\n\nBRANCH\n  git switch -c feature/x\n  git switch main\n  git branch -vv\n  git merge feature/x\n  git rebase main\n  git rebase -i HEAD~3\n\nINSPECT\n  git log --oneline --graph --all\n  git show HEAD\n  git blame file\n  git diff HEAD~1\n\nUNDO SAFE\n  git restore file\n  git restore --staged file\n  git revert HEAD\n  git reset --soft HEAD~1\n\nSTASH\n  git stash push -m \"wip\"\n  git stash list\n  git stash pop\n\nREMOTE\n  git remote -v\n  git fetch --all --prune\n  git push -u origin HEAD\n  git push --force-with-lease\n"
+    },
+    {
+      id: "nmcli",
+      title: "nmcli (NetworkManager)",
+      file: "nmcli-commands.txt",
+      blurb: "Wi‑Fi, connections, device status",
+      body: "NMCLI CHEAT SHEET\n=================\n\nSTATUS\n  nmcli general status\n  nmcli device status\n  nmcli connection show\n  nmcli device wifi list\n\nWIFI\n  nmcli device wifi connect \"SSID\" password \"secret\"\n  nmcli device wifi rescan\n  nmcli connection up \"SSID\"\n  nmcli connection down \"SSID\"\n\nCONNECTIONS\n  nmcli connection add type wifi ifname wlan0 con-name Home ssid HomeSSID\n  nmcli connection modify Home wifi-sec.key-mgmt wpa-psk wifi-sec.psk \"pass\"\n  nmcli connection delete Home\n\nDEVICE\n  nmcli device disconnect wlan0\n  nmcli device connect wlan0\n  nmcli device set wlan0 managed yes\n\nDNS / IP (examples)\n  nmcli connection modify Home ipv4.dns \"1.1.1.1 8.8.8.8\"\n  nmcli connection modify Home ipv4.method auto\n  nmcli connection up Home\n\nRADIO\n  nmcli radio wifi off|on\n"
     }
   ];
 
@@ -9660,7 +11830,7 @@ const I18N = {
     helpPaintTitle: "Paint",
     helpPaintBody: "Draw on the canvas with mouse or touch. Brush size, color picker and swatches, eraser tool. Download PNG or clear the canvas.",
     helpGamesTitle: "Games",
-    helpGamesBody: "Tetris: arrow keys move/rotate, Space hard drop, P pause. Mobile buttons available. Dino Runner (ASCII style): Space / Up / click / tap to jump over cacti. Long high jump. Score and high score.",
+    helpGamesBody: "Tetris, Dino, Block Blast, Coin Flip (gold/silver), Mines (pick count, cash out), 2048 (arrows/WASD — see tutorial), Flappy Bird (space/click).",
     helpLangTitle: "Language",
     helpLangBody: "Use the English / Deutsch buttons in the header. Your choice is saved in this browser (localStorage).",
     // common UI
@@ -9851,7 +12021,7 @@ const I18N = {
     helpPaintTitle: "Malen",
     helpPaintBody: "Auf der Fläche mit Maus oder Touch zeichnen. Pinselgröße, Farbwähler und Swatches, Radierer. PNG speichern oder Fläche leeren.",
     helpGamesTitle: "Spiele",
-    helpGamesBody: "Tetris: Pfeiltasten bewegen/drehen, Leertaste Hard Drop, P Pause. Mobile Buttons vorhanden. Dino Runner (ASCII-Stil): Leertaste / Hoch / Klick / Tippen zum Springen über Kakteen. Langer, hoher Sprung. Score und Highscore.",
+    helpGamesBody: "Tetris, Dino, Block Blast, Münzwurf (Gold/Silber), Mines, 2048 (Pfeile/WASD — Tutorial in Hilfe), Flappy Bird.",
     helpLangTitle: "Sprache",
     helpLangBody: "English / Deutsch oben in der Kopfzeile. Die Wahl wird in diesem Browser gespeichert (localStorage).",
     asciiSettings: "ASCII-Einstellungen",
